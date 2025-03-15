@@ -5,6 +5,7 @@ function App() {
   return (
    <>
     <header className='header'>
+      <div className='text-red-500'>sdsss</div>
       <div className='wrap'>
         <a href=''><img src={process.env.PUBLIC_URL + ''} alt='logo image'/></a>
       </div>
