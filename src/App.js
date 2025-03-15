@@ -10,7 +10,7 @@ function App() {
         <a href=''><img className='' src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo image'/></a>
       </div>
     </header>
-    <div className='w-full h-full fixed overflow-hidden'>
+    <div className='w-full h-full overflow-hidden'>
       <div className='transform-none box-border w-full overflow-visible'>
         <div className='pin'>
           <section className='overflow-hidden w-full h-screen relative text-white'>
@@ -54,7 +54,7 @@ function App() {
             </div>
           </section>
         </div>
-        <section className='relative overflow-hidden block w-full h-screen'>
+        <section className='relative overflow-hidden block w-full h-[130vh]'>
           <div className='w-full h-full absolute flex items-center justify-center'>
             <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + '/img/night_bg.jpg'} alt='logo image'/>
           </div>
