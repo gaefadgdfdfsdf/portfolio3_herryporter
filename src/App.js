@@ -86,13 +86,31 @@ function App() {
                       <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/herryporter2.jpg'} alt='herry porter2'/>
                     </div>
                     <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
-                      <img className='h-full w-auto max-h-full object-cover max-w-full align-top pt-5 pl-4' src={process.env.PUBLIC_URL + 'img/herry_text.png'} alt='herry porter'/>
+                      <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/herry_text.png'} alt='herry porter'/>
                     </div>
                   </div>
                 </div>
-                <div className='absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                <div className='rotate-[30deg] absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                  <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
+                    <div className='w-full relative flex items-center justify-center'>
+                      <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/emmawatson.jpg'} alt='herry porter'/>
+                      <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/emmawatson2.jpg'} alt='herry porter2'/>
+                    </div>
+                    <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
+                      <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/hermino_text.png'} alt='hermino_text'/>
+                    </div>
+                  </div>
                 </div>
-                <div className='absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                <div className='rotate-[60deg] absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                  <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
+                    <div className='w-full relative flex items-center justify-center'>
+                      <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ron.jpg'} alt='ron'/>
+                      <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ron2.jpg'} alt='ron'/>
+                    </div>
+                    <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
+                      <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/hermino_text.png'} alt='hermino_text'/>
+                    </div>  
+                  </div>
                 </div>
                 <div className='absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
                 </div>
