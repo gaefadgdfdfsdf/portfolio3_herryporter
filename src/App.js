@@ -120,8 +120,21 @@ function App() {
                     <div className='absolute h-[calc(25/920*var(--vh,1vh)*100)] flex items-center justify-center left-auto bottom-auto'>
                       <img className='h-full w-auto max-h-full max-w-full align-top object-cover' src={process.env.PUBLIC_URL + 'img/albusdumbledore_text.png'} alt='dumbledore_text'/>
                     </div>
+                    <div className='absolute bg-[#262828] -z-10 rounded-[var(--border-radius)] w-full h-full pointer-events-none shadow-[0px_0px_16px_8px_rgba(0,0,0,0.1)]'></div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className='flex items-center justify-center h-full w-full relative pointer-events-none hidden'>
+              <h3 className='text-white absolute z-10 flex text-[16vw] tracking-[-0.03em] whitespace-nowrap font-poppins transform translate-y-[80px] opacity-0 hidden'>
+                <p className='font-light mr-[0.25em]'>FANTASY</p>
+                <b className='font-medium'>STORYLINE</b>
+              </h3>
+              <div className='absolute flex items-center justify-center h-[70%] transform translate-x-0 translate-y-0 opacity-100 hidden'>
+                <img className='h-full w-auto max-h-full max-w-full align-top object-cover' src={process.env.PUBLIC_URL + 'img/book.png'} alt='book'/>
+              </div>
+              <div className='relative flex items-center justify-center w-[calc(850/920_*_var(--vh,1vh)*100)] top-[80px] opacity-0 rotate-[-120deg] absolute hidden'>
+
               </div>
             </div>
           </div>
