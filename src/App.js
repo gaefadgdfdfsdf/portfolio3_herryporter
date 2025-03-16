@@ -54,9 +54,9 @@ function App() {
             </div>
           </section>
         </div>
-        <section className='relative overflow-hidden block w-full h-[150vh]'>
+        <section className='relative overflow-hidden block w-full h-[130vh]'>
           <div className='w-full h-full absolute flex items-center justify-center'>
-            <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night'/>
+            <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night'/>
           </div>
           <div className='mt-[160px] relative mx-auto w-[90%]'>
             <h2 className='text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins'>
@@ -97,7 +97,7 @@ function App() {
                       <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/emmawatson2.jpg'} alt='herry porter2'/>
                     </div>
                     <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
-                      <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/hermino_text.png'} alt='hermino_text'/>
+                      <img className='pt-12 pl-6' src={process.env.PUBLIC_URL + 'img/hermione_text.png'} alt='hermino_text'/>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ function App() {
                       <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ron2.jpg'} alt='ron'/>
                     </div>
                     <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
-                      <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/hermino_text.png'} alt='hermino_text'/>
+                      <img className='pt-12 pl-6' src={process.env.PUBLIC_URL + 'img/hermino_text.png'} alt='hermino_text'/>
                     </div>  
                   </div>
                 </div>
