@@ -331,11 +331,38 @@ function App() {
           <div className='mt-[100px]'>
             <div className='inline-flex animate-marquee'>
               <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                <p className='font-poppins text-transparent stroke-white stroke-1 font-semibold mr-1.5'>Love, friendship,</p>
-                <b>and courage</b>
-                <p>overcome even</p>
-                <b>the darkest evil</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
               </div>
+              <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+              </div>
+              <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+              </div>
+              <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className='overflow-hidden bg-white text-center text-[calc(100/920_*_var(--vh,1vh)*100)]'>
+          <div className='text-center'>
+            <div className='box-border flex flex-col justify-center h-[calc(var(--vh,1vh)*100)]'>
+              <div className='flex items-center justify-center relative box-border'></div>
+              <div className='flex items-center justify-center relative box-border text-[calc(150/100*1em)]'></div>
+              <div className='overflow-hidden flex items-center justify-center relative box-border'></div>
             </div>
           </div>
         </section>
