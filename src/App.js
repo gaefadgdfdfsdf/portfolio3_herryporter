@@ -133,11 +133,114 @@ function App() {
               <div className='absolute flex items-center justify-center h-[70%] transform translate-x-0 translate-y-0 opacity-100 hidden'>
                 <img className='h-full w-auto max-h-full max-w-full align-top object-cover' src={process.env.PUBLIC_URL + 'img/book.png'} alt='book'/>
               </div>
-              <div className='relative flex items-center justify-center w-[calc(850/920_*_var(--vh,1vh)*100)] top-[80px] opacity-0 rotate-[-120deg] absolute hidden'>
-
+              <div className='before_bx relative flex items-center justify-center w-[calc(850/920_*_var(--vh,1vh)*100)] top-[80px] opacity-0 rotate-[-120deg] hidden'>
+                <div style={{ width: "calc(295 / 850 * 100%)" ,transform: "translate(0%, -84%)"}} className='absolute flex items-center justify-center'>
+                  <div className='before_imgbx w-full relative flex items-center justify-center'>
+                    <img className='absolute w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/boximg.png'} alt='box'/>
+                  </div>
+                  <div style={{fontSize: "max(calc(18 / 920 * var(--vh, 1vh) * 100), 12px)"}} className='absolute opacity-0 text-white px-[16%] box-border text-center'>
+                    <img tyle={{height: "calc(80 / 18 * 1em)",marginBottom: "calc(26 / 18 * 1em)"}} className='max-w-full align-top' src={process.env.PUBLIC_URL + 'img/magic_hat.png'} alt='box'/>
+                    <p className='tracking-[-0.03em] leading-[1.3] text-white text-center'>Love and Sacrifice</p>
+                  </div>
+                </div>
+                <div style={{ width: "calc(295 / 850 * 100%)" ,transform: "translate(-94%, -84%)"}} className='absolute flex items-center justify-center'>
+                  <div className='before_imgbx w-full relative flex items-center justify-center'>
+                    <img className='absolute w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/boximg.png'} alt='box'/>
+                  </div>
+                  <div style={{fontSize: "max(calc(18 / 920 * var(--vh, 1vh) * 100), 12px)"}} className='absolute opacity-0 text-white px-[16%] box-border text-center'>
+                    <img tyle={{height: "calc(80 / 18 * 1em)",marginBottom: "calc(26 / 18 * 1em)"}} className='max-w-full align-top' src={process.env.PUBLIC_URL + 'img/magic_hat.png'} alt='box'/>
+                    <p className='tracking-[-0.03em] leading-[1.3] text-white text-center'>Friendship and Trust</p>
+                  </div>
+                </div>
+                <div style={{ width: "calc(295 / 850 * 100%)" ,transform: "translate(94%, 84%)"}} className='absolute flex items-center justify-center'>
+                  <div className='before_imgbx w-full relative flex items-center justify-center'>
+                    <img className='absolute w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/boximg.png'} alt='box'/>
+                  </div>
+                  <div style={{fontSize: "max(calc(18 / 920 * var(--vh, 1vh) * 100), 12px)"}} className='absolute opacity-0 text-white px-[16%] box-border text-center'>
+                    <img tyle={{height: "calc(80 / 18 * 1em)",marginBottom: "calc(26 / 18 * 1em)"}} className='max-w-full align-top' src={process.env.PUBLIC_URL + 'img/magic_hat.png'} alt='box'/>
+                    <p className='tracking-[-0.03em] leading-[1.3] text-white text-center'>Courage and Choice</p>
+                  </div>
+                </div>
+                <div className='absolute w-full h-full flex align-center justify-center z-[-1]'>
+                  <div style={{transformOrigin: "center center",width: "calc(26% - 30px)",background: "repeating-linear-gradient(to right, #fff, #fff 4px, transparent 4px, transparent 8px)",}}className='left-[22%] top-[49.5%] absolute h-[2px] opacity-50 transform rotate-[-55deg]'></div>
+                  <div style={{transformOrigin: "center center",width: "calc(26% - 30px)",background: "repeating-linear-gradient(to right, #fff, #fff 4px, transparent 4px, transparent 8px)",}}className='right-[22%] top-[49.5%] absolute h-[2px] opacity-50 transform rotate-[55deg]'></div>
+                  <div style={{transformOrigin: "center center", width: "calc(26% - 30px)",background: "repeating-linear-gradient(to right, #fff, #fff 4px, transparent 4px, transparent 8px)", width: "calc(30% - 30px)"}}className='bottom-[19%] absolute h-[2px] opacity-50'></div>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+        <section className='bg-[#160501] pt-[120px] pb-[150px] overflow-hidden block'>
+          <div className='max-w-[1720px] relative mx-auto w-[90%]'>
+            <div>
+              <div className='perspective-[300px] mb-[40px]'>
+                <div style={{transformOrigin: "center top",filter: "brightness(1)",}} className='rounded-[20px] flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border relative top-0 h-[570px]'>
+                  <div className='flex flex-col items-start justify-between h-full text-[100px]'>
+                    <em style={{fontStyle: "italic",fontSize: "1.6em",color: "transparent",lineHeight: ".8",WebkitTextStroke: "1px #7e1800",}}className='font-libre'>01</em>
+                    <div>
+                      <h3 style={{fontSize: "max(.4em, 22px)",letterSpacing: "-0.04em",fontWeight: "600",lineHeight: "1.2",}}className='text-[#601301] font-poppins'>
+                        Harry Potter and the Sorcerer’s Stone 
+                      </h3>
+                      <p className='text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                      11-year-old Harry discovers he is a wizard<br/>
+                      and attends Hogwarts School of Witchcraft and Wizardry.<br/>
+                      He learns about his past, makes new friends, and faces<br/>
+                      Voldemort for the first time.
+                      </p>
+                    </div>
+                  </div>
+                  <div className='relative flex items-center justify-center'>
+                    <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_1.jpg'} alt='pic_1'/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='perspective-[300px] mb-[40px]'>
+                <div style={{transformOrigin: "center top",filter: "brightness(1)",}} className='rounded-[20px] flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border relative top-0 h-[570px]'>
+                  <div className='flex flex-col items-start justify-between h-full text-[100px]'>
+                    <em style={{fontStyle: "italic",fontSize: "1.6em",color: "transparent",lineHeight: ".8",WebkitTextStroke: "1px #7e1800",}}className='font-libre'>02</em>
+                    <div>
+                      <h3 style={{fontSize: "max(.4em, 22px)",letterSpacing: "-0.04em",fontWeight: "600",lineHeight: "1.2",}}className='text-[#601301] font-poppins'>
+                      Harry Potter and the Chamber of Secrets 
+                      </h3>
+                      <p className='text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                      Mysterious attacks occur at Hogwarts, turning<br/>
+                      students into stone. Harry uncovers the legend of the<br/>
+                      Chamber of Secrets and battles a deadly basilisk.
+                      </p>
+                    </div>
+                  </div>
+                  <div className='relative flex items-center justify-center'>
+                    <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_2.jpg'} alt='pic_2'/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className='perspective-[300px] mb-[40px]'>
+                <div style={{transformOrigin: "center top",filter: "brightness(1)",}} className='rounded-[20px] flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border relative top-0 h-[570px]'>
+                  <div className='flex flex-col items-start justify-between h-full text-[100px]'>
+                    <em style={{fontStyle: "italic",fontSize: "1.6em",color: "transparent",lineHeight: ".8",WebkitTextStroke: "1px #7e1800",}}className='font-libre'>02</em>
+                    <div>
+                      <h3 style={{fontSize: "max(.4em, 22px)",letterSpacing: "-0.04em",fontWeight: "600",lineHeight: "1.2",}}className='text-[#601301] font-poppins'>
+                      Harry Potter and the Chamber of Secrets 
+                      </h3>
+                      <p className='text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                      Mysterious attacks occur at Hogwarts, turning<br/>
+                      students into stone. Harry uncovers the legend of the<br/>
+                      Chamber of Secrets and battles a deadly basilisk.
+                      </p>
+                    </div>
+                  </div>
+                  <div className='relative flex items-center justify-center'>
+                    <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_2.jpg'} alt='pic_2'/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='mt-[100px]'></div>
         </section>
 
       </div>

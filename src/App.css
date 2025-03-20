@@ -132,3 +132,18 @@
 
 
 /*폰트*/
+
+
+.before_bx::before {
+
+    content: '';
+    display: block;
+    padding-bottom: 82.352%;
+}
+
+.before_imgbx::before{
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: calc(260 / 295* 100%);
+}
