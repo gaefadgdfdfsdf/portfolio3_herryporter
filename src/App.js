@@ -331,7 +331,7 @@ function App() {
           <div className='mt-[100px]'>
             <div className='inline-flex animate-marquee'>
               <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                <p>Love, friendship,</p>
+                <p className='font-poppins text-transparent stroke-white stroke-1 font-semibold mr-1.5'>Love, friendship,</p>
                 <b>and courage</b>
                 <p>overcome even</p>
                 <b>the darkest evil</b>

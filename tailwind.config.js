@@ -4,6 +4,19 @@ module.exports = {
   theme: {
     extend: {},
   },
+  theme: {
+    extend: {
+      animation: {
+        marquee: 'marquee 3s linear infinite', // default animation duration is 3s
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+    },
+  },
   plugins: [],
 
 
@@ -28,18 +41,4 @@ module.exports = {
   },
 }
 
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        marquee: 'marquee 3s linear infinite', // default animation duration is 3s
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-      },
-    },
-  },
-}
+
