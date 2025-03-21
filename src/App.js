@@ -5,7 +5,7 @@ import './reset.css';
 function App() {
   return (
    <>
-    <header className='text-white fixed z-[100] top-0 left-0 w-full'>
+    <header className='text-white absolute z-[100] top-0 left-0 w-full'>
       <div className='flex items-center justify-between pt-[max(1.5625vw,30px)] relative mx-auto my-0 w-[90%]'>
         <a href=''><img className='' src={process.env.PUBLIC_URL + 'img/logo.png'} alt='logo image'/></a>
       </div>
@@ -357,11 +357,79 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='overflow-hidden bg-white text-center text-[calc(100/920_*_var(--vh,1vh)*100)]'>
+        <section className='overflow-hidden bg-white text-center text-[calc(100/920_*_var(--vh,1vh)*100)] block'>
           <div className='text-center'>
             <div className='box-border flex flex-col justify-center h-[calc(var(--vh,1vh)*100)]'>
-              <div className='flex items-center justify-center relative box-border'></div>
-              <div className='flex items-center justify-center relative box-border text-[calc(150/100*1em)]'></div>
+              <div className='flex items-center justify-center relative box-border'>
+                <div className='absolute mb-[1.2em]'>
+                  <img className='block mx-auto h-[1.7em] min-h-[60px] max-w-full align-top' src={process.env.PUBLIC_URL + 'img/magic_hat2.png'} alt='magic_hat'/>
+                  <h2 className='font-poppins flex flex-col text-[0.5em] tracking-[-0.03em] leading-[1.3] mt-[0.46em] mb-[0.32em] text-center'>
+                    <p className='flex justify-center font-light text-center'>
+                      <div>T</div>
+                      <div>h</div>
+                      <div>e</div>
+                      <span className='flex mx-[0.28em]'>
+                        <div>S</div>
+                        <div>t</div>
+                        <div>o</div>
+                        <div>r</div>
+                        <div>y</div>
+                      </span>
+                      <div>o</div>
+                      <div>f</div>
+                      <span className='flex mx-[0.28em]'>
+                        <div>t</div>
+                        <div>h</div>
+                        <div>e</div>
+                      </span>
+                    </p>
+                    <b className='flex justify-center font-bold'>
+                      <div>D</div>
+                      <div>a</div>
+                      <div>r</div>
+                      <div>k</div>
+                      <span className='flex mx-[0.28em]'>
+                        <div>W</div>
+                        <div>i</div>
+                        <div>z</div>
+                        <div>a</div>
+                        <div>r</div>
+                        <div>d</div>
+                        <div>,</div>
+                      </span>
+                      <div>V</div>
+                      <div>o</div>
+                      <div>l</div>
+                      <div>d</div>
+                      <div>e</div>
+                      <div>m</div>
+                      <div>o</div>
+                      <div>r</div>
+                      <div>t</div>
+                    </b>
+                  </h2>
+                  <small className='overflow-hidden block text-[max(0.2em,12px)] tracking-[-0.03em] text-[#555] font-semibold'>Voldemort</small>
+                </div>
+              </div>
+              <div className='flex items-center justify-center relative box-border text-[calc(150/100*1em)]'>
+                <div className='flex whitespace-nowrap absolute'>
+                  <div className='flex items-center tracking-[-0.025em] font-Poppins font-semibold mr-[0.66em]'>
+                    <p className='mr-[0.2em]'>Power</p>
+                    <div className='w-[1.51em] relative flex items-center justify-center'>
+                      <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/wand.png'} alt='wand'/>
+                    </div>
+                  </div>
+                  <div className='flex items-center tracking-[-0.025em] font-Poppins font-semibold mr-[0.66em]'>
+                    <p className='mr-[0.2em]'>Fear</p>
+                    <div className='w-[1.51em] relative flex items-center justify-center'>
+                      <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ghost.png'} alt='ghost'/>
+                    </div>
+                  </div>
+                </div>
+                <div className='relative tracking-[-0.025em] font-Poppins font-semibold whitespace-nowrap'>
+                  <p className='tracking-[-0.025em]'>Greed</p>
+                </div>
+              </div>
               <div className='overflow-hidden flex items-center justify-center relative box-border'></div>
             </div>
           </div>
