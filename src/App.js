@@ -457,29 +457,73 @@ function App() {
             <div className='max-w-[1600px] rleative mx-auto w-[90%]'>
               <ul className='text-white mb-[380px]'>
                 <li className='mb-[180px]'>
-                  <small>01</small>
-                  <p>
+                  <small className='block text-[20px] font-semibold tracking-[-0.03em] opacity-10'>01</small>
+                  <p className='text-[30px] tracking-[-0.03em] opacity-10 leading-[1.666] mt-[20px]'>
                   Voldemort created Horcruxes to split and <br/>
-                  hide his soul in order <br className='hidden'/><b>to achieve immortality.</b>
+                  hide his soul in order <br className='hidden'/><b className='font-semibold'>to achieve immortality.</b>
                   </p>
                 </li>
                 <li className='mb-[180px]'>
-                  <small>02</small>
-                  <p>
+                  <small className='block text-[20px] font-semibold tracking-[-0.03em] opacity-10'>02</small>
+                  <p className='text-[30px] tracking-[-0.03em] opacity-10 leading-[1.666] mt-[20px]'>
                   He sought to become the most powerful being in<br/>
-                  the wizarding world, <br className='hidden'/><b>aiming to dominate others.</b>
+                  the wizarding world, <br className='hidden'/><b className='font-semibold'>aiming to dominate others.</b>
                   </p>
                 </li>
                 <li>
-                  <small>03</small>
-                  <p>
+                  <small className='block text-[20px] font-semibold tracking-[-0.03em] opacity-10'>03</small>
+                  <p className='text-[30px] tracking-[-0.03em] opacity-10 leading-[1.666] mt-[20px]'>
                   He sought to become the most powerful being in<br/>
-                  the wizarding world, <br className='hidden'/><b>aiming to dominate others.</b>
+                  the wizarding world, <br className='hidden'/><b className='font-semibold'>aiming to dominate others.</b>
                   </p>
                 </li>
               </ul>
-              <ul className='flex items-center justify-center flex-wrap w-[calc(100% + 40px)] translate-x-[-20px]'></ul>
+              <ul className='flex items-center justify-center flex-wrap w-[calc(100% + 40px)] translate-x-[-20px]'>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                  <div className='mb-[26px] relative flex items-center justify-center'>
+                    <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/egg.png'} alt='달걀'/>
+                  </div>
+                  <b className='text-[calc(1.33em)] text-[#5bcece] font-poppins font-semibold mb-[22px]'>Childhood</b>
+                  <p className='leading-[1.666]'>
+                  Born as Tom Riddle, he grew up<br/>
+                  in an orphanage and became<br/>
+                  obsessed with power and<br/>
+                  dark magic at Hogwarts.
+                  </p>
+                </li>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                  <div className='mb-[26px] relative flex items-center justify-center'>
+                    <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/crystal.png'} alt='수정'/>
+                  </div>
+                  <b className='text-[calc(1.33em)] text-[#5bcece] font-poppins font-semibold mb-[22px]'>Rise as Dark Lord</b>
+                  <p className='leading-[1.666]'>
+                  He became "He-Who-Must-Not<br/>
+                  -Be-Named," created Horcruxes<br/>
+                  for immortality, and sought to<br/>
+                  dominate the wizarding world.
+                  </p>
+                </li>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                  <div className='mb-[26px] relative flex items-center justify-center'>
+                    <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/letter.png'} alt='편지'/>
+                  </div>
+                  <b className='text-[calc(1.33em)] text-[#5bcece] font-poppins font-semibold mb-[22px]'>Resurrection & Defeat</b>
+                  <p className='leading-[1.666]'>
+                  After being defeated by Harry's <br/>
+                  mother's love,Voldemort returned, <br/>
+                  but was ultimately destroyed by <br/>
+                  his own greed and evil choices.
+                  </p>
+                </li>
+              </ul>
             </div>
+          </div>
+        </section>
+        <section className='bg-[#a5b1b0] overflow-hidden relative block'>
+          <div className='pb-[150px] flex items-start justify-between pt-[150px] max-w[1600px] relative mx-auto w-[90%]'>
+            <div className=''></div>
+            <div className=''></div>
+            <div className=''></div>
           </div>
         </section>
 
