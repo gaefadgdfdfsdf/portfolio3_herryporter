@@ -159,3 +159,9 @@
   width:100%;
   padding-bottom: calc(350 / 308 * 100%);
 }
+
+.imgbox::before {
+  content: "";
+  display: block;
+  padding-bottom: 94.736%;
+}
