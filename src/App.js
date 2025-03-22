@@ -479,7 +479,7 @@ function App() {
                 </li>
               </ul>
               <ul className='flex items-center justify-center flex-wrap w-[calc(100% + 40px)] translate-x-[-20px]'>
-                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[20px] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
                   <div className='mb-[26px] relative flex items-center justify-center'>
                     <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/egg.png'} alt='달걀'/>
                   </div>
@@ -491,7 +491,7 @@ function App() {
                   dark magic at Hogwarts.
                   </p>
                 </li>
-                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[20px] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
                   <div className='mb-[26px] relative flex items-center justify-center'>
                     <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/crystal.png'} alt='수정'/>
                   </div>
@@ -503,7 +503,7 @@ function App() {
                   dominate the wizarding world.
                   </p>
                 </li>
-                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[var(--border-radius)] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
+                <li className='w-[calc(100%/3-40px)] mx-[20px] rounded-[20px] border border-[#797979] box-border bg-[#414141] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em] text-white font-medium p-[50px_14px]'>
                   <div className='mb-[26px] relative flex items-center justify-center'>
                     <img className='h-[90px] w-full max-h-full object-cover max-w-full algin-top' src={process.env.PUBLIC_URL + 'img/letter.png'} alt='편지'/>
                   </div>
@@ -519,9 +519,11 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='bg-[#a5b1b0] overflow-hidden relative block'>
+        <section className='bg-[#a1cccc] overflow-hidden relative block'>
           <div className='pb-[150px] flex items-start justify-between pt-[150px] max-w[1600px] relative mx-auto w-[90%]'>
-            <div className=''></div>
+            <div className='absolute w-[722px] left-[96px] bottom-0 transform translate-y-[15%] opacity-65'>
+              <img className='' src={process.env.PUBLIC_URL + 'img/herry_porter.png'} alt='글자'/>
+            </div>
             <div className=''></div>
             <div className=''></div>
           </div>
