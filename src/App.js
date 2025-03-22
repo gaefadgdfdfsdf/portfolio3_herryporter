@@ -522,10 +522,22 @@ function App() {
         <section className='bg-[#a1cccc] overflow-hidden relative block'>
           <div className='pb-[150px] flex items-start justify-between pt-[150px] max-w[1600px] relative mx-auto w-[90%]'>
             <div className='absolute w-[722px] left-[96px] bottom-0 transform translate-y-[15%] opacity-65'>
-              <img className='' src={process.env.PUBLIC_URL + 'img/herry_porter.png'} alt='글자'/>
+              <img className='max-w-full h-auto align-top' src={process.env.PUBLIC_URL + 'img/herry_porter.png'} alt='글자'/>
             </div>
-            <div className=''></div>
-            <div className=''></div>
+            <div className='text-[60px] min-w-[560px]'>
+              <h2 className='tracking-[-0.03em] leading-[1.333]'>
+                <div className='overflow-hidden'>
+                  <b className='block font-semibold'>Movie</b>
+                </div>
+              </h2>
+              <div className='mt-[10px] text-[16px] pl-[3px] flex items-center'>
+                <p className='font-poppins tracking-[-0.03em] opacity-70 mr-[10px]'>View <em className='font-libre italic'>more</em></p>
+                <div className=''></div>
+              </div>
+            </div>
+            <div className='w-full'>
+
+            </div>
           </div>
         </section>
 
