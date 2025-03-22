@@ -17,6 +17,21 @@ module.exports = {
       },
     },
   },
+
+  theme: {
+    extend: {
+      animation: {
+        s1Arrow: 's1Arrow 1.5s linear infinite forwards',
+      },
+      keyframes: {
+        s1Arrow: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100px)' }, // Example animation
+        },
+      },
+    },
+  },
+
   plugins: [],
 
 
