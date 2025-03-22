@@ -430,7 +430,55 @@ function App() {
                   <p className='tracking-[-0.025em]'>Greed</p>
                 </div>
               </div>
-              <div className='overflow-hidden flex items-center justify-center relative box-border'></div>
+              <div className='overflow-hidden flex items-center justify-center relative box-border'>
+                <div className='absolute mt-[90%] text-[max(calc(24/100*1em),15px)] tracking-[-0.025em] flex flex-col items-center leading-[1.65] px-[5vw] box-border font-semibold'>
+                  <div className='_imgbx w-[calc(260/24*1em)] mb-[calc(40/24*1em)] relative flex items-center justify-center'>
+                    <img className='' src={process.env.PUBLIC_URL + 'img/vold_6.png'} alt='vold_6'/>
+                  </div>
+                  <small className='overflow-hidden'>
+                    <p>Voldemort, the most feared 
+                      <br className='hidden'/>and powerful of them all.
+                    </p>
+                  </small>
+                  <p className='mt-[0.2em]'>
+                    <span className='bg-clip-text text-transparent'>
+                    People were so afraid of him that they refused to even say his name,<br/>
+                    calling him "He-Who-Must-Not-Be-Named" instead.
+                    </span>
+                  </p>
+                </div>
+                <div className='mt-[50%] h-[600%] absolute flex items-center justify-center'>
+                  <img className='w-auto h-full opacity-30 max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/haegol.png'} alt='해골마법사'/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='pb-[200px] relatvie overflow-hidden'>
+            <div className='max-w-[1600px] rleative mx-auto w-[90%]'>
+              <ul className='text-white mb-[380px]'>
+                <li className='mb-[180px]'>
+                  <small>01</small>
+                  <p>
+                  Voldemort created Horcruxes to split and <br/>
+                  hide his soul in order <br className='hidden'/><b>to achieve immortality.</b>
+                  </p>
+                </li>
+                <li className='mb-[180px]'>
+                  <small>02</small>
+                  <p>
+                  He sought to become the most powerful being in<br/>
+                  the wizarding world, <br className='hidden'/><b>aiming to dominate others.</b>
+                  </p>
+                </li>
+                <li>
+                  <small>03</small>
+                  <p>
+                  He sought to become the most powerful being in<br/>
+                  the wizarding world, <br className='hidden'/><b>aiming to dominate others.</b>
+                  </p>
+                </li>
+              </ul>
+              <ul className='flex items-center justify-center flex-wrap w-[calc(100% + 40px)] translate-x-[-20px]'></ul>
             </div>
           </div>
         </section>
