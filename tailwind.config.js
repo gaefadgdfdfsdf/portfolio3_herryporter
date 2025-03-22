@@ -26,7 +26,7 @@ module.exports = {
       keyframes: {
         s1Arrow: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(100px)' }, // Example animation
+          '100%': { transform: 'translateX(100px)' },
         },
       },
     },
