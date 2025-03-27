@@ -3,6 +3,65 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+
+.pretendard-thin {
+  font-family: "pretendard", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}  
+
+
+.pretendard-extralight {
+  font-family: "pretendard", sans-serif;
+  font-weight:200;
+  font-style: normal;
+}  
+
+
+.pretendard-light {
+  font-family: "pretendard", sans-serif;
+  font-weight:300;
+  font-style: normal;
+}  
+
+
+.pretendard-regular {
+  font-family: "pretendard", sans-serif;
+  font-weight:400;
+  font-style: normal;
+}  
+
+
+.pretendard-medium {
+  font-family: "pretendard", sans-serif;
+  font-weight:500;
+  font-style: normal;
+}
+
+.pretendard-semibold {
+  font-family: "pretendard", sans-serif;
+  font-weight:600;
+  font-style: normal;
+}  
+
+.pretendard-bold  {
+  font-family: "pretendard", sans-serif;
+  font-weight:700;
+  font-style: normal;
+}  
+
+
+.pretendard-extrabold  {
+  font-family: "pretendard", sans-serif;
+  font-weight:800;
+  font-style: normal;
+}  
+
+
+
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
@@ -112,6 +171,14 @@
 }
 
 
+.libre-baskerville-thin {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
 .libre-baskerville-regular {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
@@ -122,6 +189,18 @@
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.libre-baskerville-light-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.libre-baskerville-thin-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .libre-baskerville-regular-italic {
@@ -164,4 +243,136 @@
   content: "";
   display: block;
   padding-bottom: 94.736%;
+}
+
+
+.fadein{
+ 
+  animation: fadein 1s ease-in-out;
+
+
+
+}
+
+
+
+
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+
+.fadeleft {
+  animation: fadeleft 1s ease-in-out;
+}
+
+
+@keyframes fadeleft{
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+
+.opacity_1 {
+  animation:  opacity_1 1s ease-in;
+}
+
+
+@keyframes opacity_1{
+  0% {
+    opacity: 0.2;
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+
+}
+
+.opacity_2 {
+  animation:  opacity_2 1.5s ease-in;
+}
+
+
+@keyframes opacity_2{
+  0% {
+    opacity: 0.2;
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+
+}
+
+
+.opacity_3 {
+  animation:  opacity_3 2s ease-in;
+}
+
+
+@keyframes opacity_3{
+  0% {
+    opacity: 0.2;
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+
+}
+
+
+
+.opacity_4 {
+  animation:  opacity_4 2.5s ease-in;
+}
+
+
+@keyframes opacity_4{
+  0% {
+    opacity: 0.2;
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+
+}
+
+
+.opacity_5 {
+  animation:  opacity_5 3s ease-in;
+}
+
+
+@keyframes opacity_5{
+  0% {
+    opacity: 0.2;
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+
 }

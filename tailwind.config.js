@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {},
   },
+  
   theme: {
     extend: {
       animation: {
@@ -32,16 +33,7 @@ module.exports = {
     },
   },
 
-  plugins: [],
-  theme: {
-    extend: {
-      fontFamily: {
-        cormorant: ['"Cormorant Garamond"', 'serif'],
-        libre: ['"Libre Baskerville"', 'serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
-      },
-    },
-  },
+
 
   theme: {
     extend: {
