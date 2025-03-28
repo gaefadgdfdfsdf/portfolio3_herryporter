@@ -418,3 +418,21 @@
 
 }
 
+/* CSS for sticky section */
+.sticky-section {
+  position: -webkit-sticky; /* Safari 대응 */
+  position: sticky;
+  top: 0;
+  z-index: 10; /* 필요한 경우 z-index 설정 */
+}
+
+/* 스크롤 시 fade-out, fade-in 적용 */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s;
+}

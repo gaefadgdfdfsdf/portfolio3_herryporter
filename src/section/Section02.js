@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+
 
 const Section02 = () => {
+
+
+        
     return (
         <>
-            <section className='relative overflow-hidden block w-full h-[130vh]'>
+            <section id="section02" className='relative overflow-hidden block w-full h-[200vh]'>
                 <div className='w-full h-full absolute flex items-center justify-center'>
                     <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night' />
                 </div>
@@ -83,7 +87,7 @@ const Section02 = () => {
                             <img className='h-full w-auto max-h-full max-w-full align-top object-cover' src={process.env.PUBLIC_URL + 'img/book.png'} alt='book' />
                         </div>
                         <div className='before_bx relative flex items-center justify-center w-[calc(850/920_*_var(--vh,1vh)*100)] top-[80px] opacity-0 rotate-[-120deg] hidden'>
-                            <div style={{ width: "calc(295 / 850 * 100%)", transform: "translate(0%, -84%)" }} className='absolute flex items-center justify-center'>
+                            <div style={{ width: "calc(295 / 850 * 100%)", transform: "translate(-94%, -84%)" }} className='absolute flex items-center justify-center'>
                                 <div className='before_imgbx w-full relative flex items-center justify-center'>
                                     <img className='absolute w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/boximg.png'} alt='box' />
                                 </div>
