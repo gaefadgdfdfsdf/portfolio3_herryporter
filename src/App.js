@@ -20,7 +20,7 @@ function App() {
         <a href=''><img className='max-[500px]:h-[24px]' src={process.env.PUBLIC_URL + 'img/logo.png'} alt='logo image'/></a>
       </div>
     </header>
-    <div className='w-full h-full overflow-hidden'>
+    <div className='w-full h-full overflow-x-clip'>
       <div className='transform-none box-border w-full overflow-visible relative'>
         <Section01 />
         <Section02 />

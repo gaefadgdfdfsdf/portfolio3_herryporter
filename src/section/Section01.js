@@ -10,7 +10,7 @@ const Section01 = () => {
       
       <section
       
-      className='w-full h-screen text-white top-0 sticky'
+      className='w-full h-screen text-white top-0 relative'
     >
          
         <div className='w-full h-full absolute flex items-center justify-center'>
@@ -25,10 +25,7 @@ const Section01 = () => {
               <p>HOGWARTS</p>
             </strong>
             <small className='max-[580px]:text-[16px] max-[820px]:text-[18px] max-lg:text-[22px] max-xl:text-[24px] pretendard-regular fadein overflow-hidden block text-[26px] tracking-[-0.03em] leading-[1.53] transition-all ease-in-out duration-500'>
-              <p>Hogwarts is the magical school in the Harry Potter series,</p>
-            </small>
-            <small className='max-[580px]:text-[16px] max-[820px]:text-[18px] max-lg:text-[22px]  max-xl:text-[24px] pretendard-regular fadein overflow-hidden block text-[26px] tracking-[-0.03em] leading-[1.53] transition-all ease-in-out duration-500'>
-              <p>located in Britain. Students are sorted into four houses</p>
+              <p>Hogwarts is the magical school in the Harry Potter series,<br className='hidden md:block'/>located in Britain. Students are sorted into four houses</p>
             </small>
           </h2>
           <div className='max-[820px]:flex-col max-[820px]:items-start max-[820px]:justify-between flex justify-between flex-row-reverse items-end'>
