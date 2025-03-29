@@ -1,17 +1,44 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const Section01 = () => {
- 
 
+  // 100vh 이상 스크롤시 section01 position : relative 100vh미만 스크롤시 position :sticky
+  const [scrollY, setScrollY] = useState(0);
+  const [position, setPosition] = useState("sticky");
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY;
+      setScrollY(scrollPos);
+
+      if (scrollPos >= window.innerHeight) {
+        setPosition("relative");
+      } else {
+        setPosition("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
 
   return (
     <>
       
       <section
-      
-      className='w-full h-screen text-white top-0 relative'
+      className={`top-0 w-full h-screen text-white top-0 ${
+        position === "sticky" ? "sticky" : "relative"
+      }`}
+     
     >
+        <header className='text-white absolute z-[100] top-0 left-0 w-full'>
+          <div className='flex items-center justify-between pt-[max(1.5625vw,30px)] relative mx-auto my-0 w-[90%]'>
+            <a href=''><img className='max-[500px]:h-[24px]' src={process.env.PUBLIC_URL + 'img/logo.png'} alt='logo image'/></a>
+          </div>
+        </header>
          
         <div className='w-full h-full absolute flex items-center justify-center'>
           <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/bl_bg.jpg'} alt='blackbg' />

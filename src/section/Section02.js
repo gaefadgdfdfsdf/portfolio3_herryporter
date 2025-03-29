@@ -7,7 +7,7 @@ const Section02 = () => {
         
     return (
         <>
-            <section id="section02" className='relative overflow-hidden block w-full h-[200vh]'>
+            <section id="section02" className='overflow-hidden block w-full h-[200vh] relative'>
                 <div className='w-full h-full absolute flex items-center justify-center'>
                     <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night' />
                 </div>
