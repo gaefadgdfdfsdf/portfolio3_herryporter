@@ -24,7 +24,7 @@ function App() {
         <Section03/>
         <Section04/>
         <Section05/>
-        <Gsap01 />
+        {/* <Gsap01 /> */}
       </div>
     </div>
  

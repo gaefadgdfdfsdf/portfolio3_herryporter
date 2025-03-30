@@ -27,7 +27,7 @@ const Gsap01 = () => {
 
     return (
         <>
-         <section className='w-full pt-32 pb-[100vh] relative mx-auto my-0 bg-[#160501] overflow-hidden border-4'>
+         <section className='w-full pt-32 pb-[50vh] relative mx-auto my-0 bg-[#160501] overflow-hidden border-4'>
         <div ref={el => sectionsRef.current[0] = el} className='w-[90%] h-[570px] mx-auto mb-20'>
             <div className="bg-[#fff] text-white rounded-[50px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
                 <div className='flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
@@ -172,36 +172,35 @@ const Gsap01 = () => {
         </div>
       
     </section>
-    <section className='w-full top-0 relative mx-auto my-0 bg-[#160501] overflow-hidden border-4 border-red-600'>  
-    <div className=''>
-                    <div className='inline-flex animate-marquee'>
-                        <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
-                            <b className='font-libre italic text-white mr-1.5'>and courage</b>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
-                            <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
-                        </div>
-                        <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
-                            <b className='font-libre italic text-white mr-1.5'>and courage</b>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
-                            <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
-                        </div>
-                        <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
-                            <b className='font-libre italic text-white mr-1.5'>and courage</b>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
-                            <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
-                        </div>
-                        <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
-                            <b className='font-libre italic text-white mr-1.5'>and courage</b>
-                            <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
-                            <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
-                        </div>
-                    </div>
-                </div>
-                </section>  
+    <section className='w-full top-0 relative mx-auto my-0 bg-[#160501] overflow-hidden border-4 border-red-600  pb-20'>  
+        <div className='inline-flex animate-marquee'>
+            <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+            </div>
+            <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+            </div>
+            <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+            </div>
+            <div className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
+                <b className='font-libre italic text-white mr-1.5'>and courage</b>
+                <p className='font-poppins text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
+                <b className='font-libre italic text-white mr-1.5'>the darkest evil</b>
+            </div>
+        </div>
+    
+    </section>  
         </>
     )
 }
