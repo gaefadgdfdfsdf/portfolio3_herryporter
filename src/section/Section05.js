@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import {motion} from "framer-motion";
 
 const Section05 = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting); // 뷰포트에서 벗어나면 false, 다시 들어오면 true
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
+   
     return (
         <>
-            <section className='bg-[#a1cccc] overflow-hidden relative block'>
+            <section ref={ref} className='bg-[#a1cccc] overflow-hidden relative block'>
                 <div className='pb-[150px] flex items-start justify-between pt-[150px] max-w[1600px] relative mx-auto w-[90%]'>
                     <div className='absolute w-[722px] left-[96px] bottom-0 transform translate-y-[15%] opacity-65'>
                         <img className='max-w-full h-auto align-top' src={process.env.PUBLIC_URL + 'img/herry_porter.png'} alt='글자' />
@@ -11,21 +36,35 @@ const Section05 = () => {
                     <div className='text-[60px] min-w-[560px]'>
                         <h2 className='tracking-[-0.03em] leading-[1.333]'>
                             <div className='overflow-hidden'>
-                                <b className='block font-semibold'>Movie</b>
+                               
+                            <motion.b
+                            
+                             initial={{opacity:0, y:50}}
+                             animate={isVisible ? {opacity: 1, y:0} : {}}
+                             transition={{duration:0.8, ease:"easeOut"}}
+                             className='block font-semibold '>Movie</motion.b>
                             </div>
                         </h2>
-                        <div className='mt-[10px] text-[16px] pl-[3px] flex items-center'>
+                        <motion.div
+                         initial={{opacity:0, y:50}}
+                         animate={isVisible ? {opacity: 1, y:0} : {}}
+                         transition={{duration:0.8, ease:"easeOut"}}
+                         className='mt-[10px] text-[16px] pl-[3px] flex items-center'>
                             <p className='font-poppins tracking-[-0.03em] opacity-70 mr-[10px]'>View <em className='font-libre italic'>more</em></p>
                             <div className='flex'>
                                 <i className='text-[20px] animate-[s1Arrow_1.5s_linear_infinite_forwards]'></i>
                                 <i className='animate-[s1Arrow_1.5s_linear_infinite_forwards] delay-[0.1s] m-[-0.7em]'></i>
                                 <i className='animate-[s1Arrow_1.5s_linear_infinite_forwards] delay-[0.2s] m-[-0.7em]'></i>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className='w-full'>
                         <div className='w-full touch-pan-y mx-auto relative overflow-hidden list-none p-0 z-10'>
-                            <div className='transform-gpu translate-x-0 translate-y-0 translate-z-0 relative w-full h-full z-10 flex transition-transform box-content'>
+                            <motion.div
+                             initial={{opacity:0, y:50}}
+                             animate={isVisible ? {opacity: 1, y:0} : {}}
+                             transition={{duration:0.8, ease:"easeOut"}}
+                             className='transform-gpu translate-x-0 translate-y-0 translate-z-0 relative w-full h-full z-10 flex transition-transform box-content'>
                                 <div className='mr-[40px] w-[254px] flex-shrink-0 h-full relative transition-transform'>
                                     <a className='block' href='https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%ED%95%B4%EB%A6%AC%ED%8F%AC%ED%84%B01' target='_blank'>
                                         <div className='imgbox w-full rounded-[20px] relative flex items-center justify-center'>
@@ -75,7 +114,7 @@ const Section05 = () => {
                                         </div>
                                     </a>
                                 </div>
-                            </div>
+                            </motion.div>
                             <span className='absolute left-0 top-0 pointer-events-none opacity-0 z-[-1000]'></span>
                         </div>
                     </div>

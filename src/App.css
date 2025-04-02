@@ -255,9 +255,25 @@
 }
 
 
+.animate-fadeIn {
+  animation: fadein_ani 1s ease-in-out;
+}
+
 
 
 @keyframes fadein{
+  0% {
+   
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+@keyframes fadein_ani{
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -268,7 +284,6 @@
   }
 
 }
-
 
 .fadeleft {
   animation: fadeleft 1s ease-in-out;

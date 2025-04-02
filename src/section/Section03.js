@@ -10,6 +10,7 @@ const Section03 = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         
+        
         sectionsRef.current.forEach((section, i) => {
             ScrollTrigger.create({
                 trigger: section,
@@ -22,6 +23,7 @@ const Section03 = () => {
         });
 
         return () => {
+            
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
     }, []);
@@ -29,7 +31,7 @@ const Section03 = () => {
     return (
         <>
         <section className='w-full pt-32 pb-[50vh] relative mx-auto my-0 bg-[#160501] overflow-hidden border-4'>
-       <div ref={el => sectionsRef.current[0] = el} className='w-[90%] h-[570px] mx-auto mb-20'>
+       <div ref={el => sectionsRef.current[0] = el} className=' w-[90%] h-[570px] mx-auto mb-20'>
            <div className="max-xl:flex-col max-xl:h-auto max-xl:items-center max-xl:p-10 max-[1450px]:pt-[70px] max-[1450px]:pb-[70px] max-[1450px]:pl-[50px] max-[1450px]:pr-[50px]  bg-[#fff] text-white rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
                <div className='max-xl:text-center flex flex-col max-xl:items-center justify-between h-full text-[100px] overflow-hidden'>
                    <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className=' max-xl:text-[1em] max-xl:mb-[0.3em] text-[1.3em] libre-baskerville-regular '>01</em>
@@ -106,19 +108,19 @@ const Section03 = () => {
                    </div>
                </div>
                <div className='max-[1600px]:w-[460px] relative flex items-center justify-center'>
-                <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_4.jpg'} alt='pic_4' />
+                <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_4.jpg'} alt='pic_4' />
                </div>
            </div>
        </div>
        <div ref={el => sectionsRef.current[4] = el} className='w-[90%] h-[110vh] mx-auto'>
             <div className="max-xl:flex-col max-xl:h-auto max-xl:items-center max-xl:p-10 max-[1450px]:pt-[70px] max-[1450px]:pb-[70px] max-[1450px]:pl-[50px] max-[1450px]:pr-[50px] bg-[#fff] text-white rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
-               <div className='flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
+               <div className='max-xl:items-center max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                    <em style={{ fontStyle: "italic",color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-xl:text-[1em] max-xl:mb-[0.3em] text-[1.3em] libre-baskerville-regular'>05</em>
                    <div>
                        <h3 style={{  letterSpacing: "-0.04em", fontWeight: "600", lineHeight: "1.2", }} className='max-[1450px]:text-[34px] text-[max(.4em,22px)] text-[#601301] poppins-bold'>
                        Harry Potter and the Order of the Phoenix
                        </h3>
-                       <p className='pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                       <p className='max-xl:text-[160x] max-xl:mb-[1.2em] pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
                        The Ministry of Magic denies Voldemort’s return,<br />
                        and Harry faces a harsh new teacher, Dolores Umbridge.<br />
                        Harry forms Dumbledore’s Army to fight against oppression<br />
@@ -127,19 +129,19 @@ const Section03 = () => {
                    </div>
                </div>
                <div className='max-[1600px]:w-[460px] relative flex items-center justify-center'>
-                <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_5.jpg'} alt='pic_5' />
+                <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_5.jpg'} alt='pic_5' />
                </div>
            </div>
        </div>
        <div ref={el => sectionsRef.current[5] = el} className='w-[90%] h-[110vh] mx-auto'>
            <div className="max-xl:flex-col max-xl:h-auto max-xl:items-center max-xl:p-10 max-[1450px]:pt-[70px] max-[1450px]:pb-[70px] max-[1450px]:pl-[50px] max-[1450px]:pr-[50px] bg-[#fff] text-white rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
-               <div className='flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
+               <div className='max-xl:items-center max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                    <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-xl:text-[1em] max-xl:mb-[0.3em] text-[1.3em] libre-baskerville-regular'>06</em>
                    <div>
                        <h3 style={{  letterSpacing: "-0.04em", fontWeight: "600", lineHeight: "1.2", }} className='max-[1450px]:text-[34px] text-[max(.4em,22px)] text-[#601301] poppins-bold'>
                        Harry Potter and the Half-Blood Prince
                        </h3>
-                       <p className='pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                       <p className='max-xl:text-[160x] max-xl:mb-[1.2em] pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
                        Dumbledore teaches Harry <br />
                        Voldemort’s past and the secret of Horcruxes.<br />
                        Tragedy strikes as Hogwarts is no longer safe.
@@ -147,33 +149,33 @@ const Section03 = () => {
                    </div>
                </div>
                <div className='max-[1600px]:w-[460px] relative flex items-center justify-center'>
-                <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_6.jpg'} alt='pic_6' />
+                <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_6.jpg'} alt='pic_6' />
                </div>
            </div>
        </div>
 
        <div ref={el => sectionsRef.current[6] = el} className='w-[90%] h-[110vh] mx-auto'>
            <div className="max-xl:flex-col max-xl:h-auto max-xl:items-center max-xl:p-10 max-[1450px]:pt-[70px] max-[1450px]:pb-[70px] max-[1450px]:pl-[50px] max-[1450px]:pr-[50px] bg-[#fff] text-white rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
-               <div className='flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
-                   <em style={{ fontStyle: "italic", fontSize: "1.3em", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='libre-baskerville-regular'>07</em>
+               <div className='max-xl:items-center max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
+                   <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-xl:text-[1em] max-xl:mb-[0.3em] text-[1.3em] libre-baskerville-regular'>07</em>
                    <div>
                        <h3 style={{  letterSpacing: "-0.04em", fontWeight: "600", lineHeight: "1.2", }} className='max-[1450px]:text-[34px] text-[max(.4em,22px)] text-[#601301] poppins-bold'>
                        Harry Potter and the Deathly Hallows
                        </h3>
-                       <p className='pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
-                       Harry and his friends go on a quest to destroy Voldemort’s Horcruxes.<br />
+                       <p className='max-xl:text-[160x] max-xl:mb-[1.2em] pretendard-medium text-[max(0.2em,14px)] tracking-[-0.03em] leading-[1.7] text-[#555555] font-medium mt-[calc(26/20*1em)]'>
+                       Harry and his friends go on a quest to destroy Voldemort’s Horcruxes.<br className='max-md:hidden' />
                        The final battle at Hogwarts decides the fate of the wizarding world.
                        </p>
                    </div>
                </div>
                <div className='max-[1600px]:w-[460px] relative flex items-center justify-center'>
-                 <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_7.jpg'} alt='pic_7' />
+                 <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_7.jpg'} alt='pic_7' />
                </div>
            </div>
        </div>
      
         {/* 마지막 섹션 이후 추가 여백 */}
-        <div className='h-[30vh]'></div>
+        <div className='max-md:h-[50vh] max-xl:h-[70vh] h-[30vh]'></div>
   
    </section>
    <section className='w-full top-0 relative mx-auto my-0 bg-[#160501] overflow-hidden border-4 border-red-600 pb-20'>  
@@ -181,7 +183,7 @@ const Section03 = () => {
         {/* 텍스트 그룹을 2배로 복제하여 자연스러운 반복 */}
         <div className='flex shrink-0 space-x-4'>
             {[...Array(2)].map((_, i) => (
-                <div key={i} className='text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
+                <div key={i} className='max-md:text-[100px] text-[150px] tracking-[-0.03em] flex whitespace-nowrap'>
                     <p className='poppins-semibold text-transparent custom-stroke font-semibold mr-1.5'>Love, friendship,</p>
                     <b className='libre-baskerville-thin-italic text-white mr-1.5'>and courage</b>
                     <p className='poppins-semibold text-transparent custom-stroke font-semibold mr-1.5'>overcome even</p>
