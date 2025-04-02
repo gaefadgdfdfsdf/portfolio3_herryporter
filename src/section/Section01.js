@@ -29,7 +29,7 @@ const Section01 = () => {
     <>
       
       <section
-      className={`top-0 w-full h-screen text-white top-0 ${
+      className={`w-full h-screen text-white top-0 ${
         position === "sticky" ? "sticky" : "relative"
       }`}
      

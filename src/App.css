@@ -436,3 +436,19 @@
   opacity: 1;
   transition: opacity 0.3s;
 }
+
+
+/* 가로 텍스트 애니메이션 */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 8s linear infinite;
+}
