@@ -1,29 +1,87 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import {motion} from "framer-motion";
 
 
 const Section02 = () => {
+
+        const [isVisible, setIsVisible] = useState(false);
+        const ref = useRef(null);
+    
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    setIsVisible(entry.isIntersecting); // 뷰포트에서 벗어나면 false, 다시 들어오면 true
+                },
+                { threshold: 0.5 }
+            );
+    
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+    
+            return () => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            };
+        }, []);
 
 
         
     return (
         <>
-            <section id="section02" className='overflow-hidden block w-full h-[200vh] relative'>
+            <section ref={ref} id="section02" className='overflow-hidden block w-full h-[200vh] relative'>
                 <div className='w-full h-full absolute flex items-center justify-center'>
                     <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night' />
                 </div>
                 <div className='mt-[160px] relative mx-auto w-[90%]'>
                     <h2 className='text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins'>
-                        <b className='flex font-medium mr-[0.2em]'>
-                            <div>C</div>
-                            <div>H</div>
-                            <div>A</div>
-                            <div>R</div>
-                            <div>A</div>
-                            <div>C</div>
-                            <div>T</div>
-                            <div>E</div>
-                            <div>R</div>
-                        </b>
+                        <motion.b
+                         initial={{x:50}}
+                         animate={isVisible ? {x:0} : {}}
+                         transition={{duration:0.8, ease:"easeOut"}}
+                         className='pretendard-semibold flex font-medium mr-[0.2em]'>
+                            <motion.div
+                            initial={{opacity:0, y:-50}}
+                            animate={isVisible ? {opacity: 1, y:0} : {}}
+                            transition={{duration:0.8, ease:"easeOut"}}
+                            >C</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-40}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:1, ease:"easeOut"}}
+                            >a</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-30}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:1.2, ease:"easeOut"}}
+                            >r</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-20}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:1.4, ease:"easeOut"}}
+                            >a</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-10}}
+                            animate={isVisible ? {opacity: 1  , y:0} : {}}
+                            transition={{duration:1.6, ease:"easeOut"}}
+                            >c</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-10}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:1.8, ease:"easeOut"}}
+                            >t</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-10}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:2, ease:"easeOut"}}
+                            >e</motion.div>
+                            <motion.div
+                            initial={{opacity:0 , y:-10}}
+                            animate={isVisible ? {opacity: 1 , y:0} : {}}
+                            transition={{duration:2.2, ease:"easeOut"}}
+                            >r</motion.div>
+                        </motion.b>
                     </h2>
                 </div>
                 <div className='relative flex overflow-visible box-border w-[1912px] h-[5242px] p-[0_0_4289px_0] z-auto'>
