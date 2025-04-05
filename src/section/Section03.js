@@ -31,8 +31,8 @@ const Section03 = () => {
     return (
         <>
         <section className='w-full pt-32 pb-[50vh] relative mx-auto my-0 bg-[#160501] overflow-hidden border-4'>
-       <div ref={el => sectionsRef.current[0] = el} className=' w-[90%] h-[570px] mx-auto mb-20'>
-           <div className="max-xl:flex-col max-xl:h-auto max-xl:items-center max-xl:p-10 max-[1450px]:pt-[70px] max-[1450px]:pb-[70px] max-[1450px]:pl-[50px] max-[1450px]:pr-[50px]  bg-[#fff] text-white rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)] overflow-hidden flex items-end justify-between bg-white pt-[70px] pb-[70px] pl-[100px] pr-[100px] box-border h-[570px] mb-20 ">
+       <div ref={el => sectionsRef.current[0] = el} className=' w-full h-full mx-auto mb-20 bg-black'>
+           <div className="bg-white m-20">
                <div className='max-xl:text-center flex flex-col max-xl:items-center justify-between h-full text-[100px] overflow-hidden'>
                    <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] max-xl:text-[1em] max-xl:mb-[0.3em] text-[1.3em] libre-baskerville-regular '>01</em>
                    <div>

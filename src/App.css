@@ -487,5 +487,5 @@
 
 .animate-marquee {
   display: flex;
-  animation: marquee 8s linear infinite;
+  animation: marquee 24s linear infinite;
 }
