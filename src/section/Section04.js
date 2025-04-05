@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import {motion} from "framer-motion";
+
 
 const Section04 = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting); // 뷰포트에서 벗어나면 false, 다시 들어오면 true
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
         <>
             <section className='overflow-hidden bg-white text-center text-[calc(100/920_*_var(--vh,1vh)*100)] block'>
-                <div className='text-center'>
+                <div ref={ref}  className='text-center'>
                     <div className='box-border flex flex-col justify-center h-[calc(var(--vh,1vh)*100)]'>
                         <div className='flex items-center justify-center relative box-border'>
                             <div className='absolute mb-[1.2em]'>
@@ -15,11 +40,17 @@ const Section04 = () => {
                                         <div>h</div>
                                         <div>e</div>
                                         <span className='flex mx-[0.28em]'>
-                                            <div>S</div>
-                                            <div>t</div>
-                                            <div>o</div>
-                                            <div>r</div>
-                                            <div>y</div>
+                                            <div
+                                            >S</div>
+                                            <div
+                                            >t</div>
+                                            <div
+                                            >o</div>
+                                            <div
+                                            >r</div>
+                                            <div
+                                           
+                                            >y</div>
                                         </span>
                                         <div>o</div>
                                         <div>f</div>
@@ -57,8 +88,8 @@ const Section04 = () => {
                                 <small className='overflow-hidden block text-[max(0.2em,12px)] tracking-[-0.03em] text-[#555] font-semibold'>Voldemort</small>
                             </div>
                         </div>
-                        <div className='flex items-center justify-center relative box-border text-[calc(150/100*1em)]'>
-                            <div className='flex whitespace-nowrap absolute'>
+                        <div className='flex items-center justify-center relative top-80 box-border text-[calc(150/100*1em)]'>
+                            <div className='flex whitespace-nowrap absolute left-[8em] items-center'>
                                 <div className='flex items-center tracking-[-0.025em] font-Poppins font-semibold mr-[0.66em]'>
                                     <p className='mr-[0.2em]'>Power</p>
                                     <div className='w-[1.51em] relative flex items-center justify-center'>
@@ -71,8 +102,11 @@ const Section04 = () => {
                                         <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ghost.png'} alt='ghost' />
                                     </div>
                                 </div>
+                                <div className='tracking-[-0.025em] font-Poppins font-semibold whitespace-nowrap'>
+                                    <p className='tracking-[-0.025em]'>Greed</p>
+                                </div>
                             </div>
-                            <div className='relative tracking-[-0.025em] font-Poppins font-semibold whitespace-nowrap'>
+                            <div className='hidden relative tracking-[-0.025em] font-Poppins font-semibold whitespace-nowrap'>
                                 <p className='tracking-[-0.025em]'>Greed</p>
                             </div>
                         </div>
