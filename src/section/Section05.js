@@ -55,7 +55,7 @@ const Section05 = () => {
                          transition={{duration:0.8, ease:"easeOut"}}
                          className='max-[1600px]:mb-[20px] mt-[10px] text-[16px] pl-[3px] flex items-center'>
                             <p className='poppins-regular  tracking-[-0.03em] opacity-70 mr-[10px]'>View <em className='libre-baskerville-regular-italic italic'>more</em></p>
-                            <div className="flex mt-[3px]">
+                            <div className="flex mt-[2.5px]">
                                 <i className="w-[13px] infinite_side mr-[-4px]">
                                     <SvgIcon />
                                 </i>
