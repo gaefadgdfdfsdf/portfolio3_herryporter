@@ -29,43 +29,75 @@ const Section04 = () => {
     return (
         <>
             <section className='overflow-hidden bg-white text-center text-[calc(100/920_*_var(--vh,1vh)*100)] block'>
-                <div ref={ref}  className='text-center'>
+                <div ref={ref} className='text-center'>
                     <div className='box-border flex flex-col justify-center h-[calc(var(--vh,1vh)*100)]'>
                         <div className='flex items-center justify-center relative box-border'>
                             <div className='absolute mb-[1.2em]'>
-                                <img className='block mx-auto h-[1.7em] min-h-[60px] max-w-full align-top' src={process.env.PUBLIC_URL + 'img/magic_hat2.png'} alt='magic_hat' />
+                                <motion.img
+                                 initial={{opacity:0, scale:0.5, rotate:30}}
+                                 animate={isVisible ? {opacity: 1, scale:1, rotate:0} : {}}
+                                 transition={{duration:0.6, ease:"easeOut"}}
+                                 className='block mx-auto h-[1.7em] min-h-[60px] max-w-full align-top'
+                                 src={process.env.PUBLIC_URL + 'img/magic_hat2.png'} alt='magic_hat' />
                                 <h2 className='font-poppins flex flex-col text-[0.5em] tracking-[-0.03em] leading-[1.3] mt-[0.46em] mb-[0.32em] text-center'>
                                     <p className='flex justify-center font-light text-center'>
-                                        <div>T</div>
-                                        <div>h</div>
-                                        <div>e</div>
-                                        <span className='flex mx-[0.28em]'>
-                                            <div
-                                            >S</div>
-                                            <div
-                                            >t</div>
-                                            <div
-                                            >o</div>
-                                            <div
-                                            >r</div>
-                                            <div
-                                           
-                                            >y</div>
-                                        </span>
-                                        <div>o</div>
-                                        <div>f</div>
-                                        <span className='flex mx-[0.28em]'>
+                                    <motion.div
+                                    initial={{opacity:0, y:-50}}
+                                    animate={isVisible ? {opacity: 1, y:0} : {}}
+                                    transition={{duration:0.4, ease:"easeOut"}}
+                                    >T</motion.div>
+                                    <motion.div
+                                    initial={{opacity:0, y:-50}}
+                                    animate={isVisible ? {opacity: 1, y:0} : {}}
+                                    transition={{duration:0.5, ease:"easeOut"}}
+                                    >h</motion.div>
+                                    <motion.div
+                                    initial={{opacity:0, y:-50}}
+                                    animate={isVisible ? {opacity: 1, y:0} : {}}
+                                    transition={{duration:0.6, ease:"easeOut"}}
+                                    >e</motion.div>
+                                          <motion.span
+                                            initial={{opacity:0, y:-50}}
+                                            animate={isVisible ? {opacity: 1, y:0} : {}}
+                                            transition={{duration:0.7, ease:"easeOut"}}
+                                             className='flex mx-[0.28em]'>
+                                            <div>S</div>
+                                            <div>t</div>
+                                            <div>o</div>
+                                            <div>r</div>
+                                            <div>y</div>
+                                        </motion.span>
+                                        <motion.div
+                                        initial={{opacity:0, y:-50}}
+                                        animate={isVisible ? {opacity: 1, y:0} : {}}
+                                        transition={{duration:0.7, ease:"easeOut"}}
+                                        >o</motion.div>
+                                        <motion.div
+                                        initial={{opacity:0, y:-50}}
+                                        animate={isVisible ? {opacity: 1, y:0} : {}}
+                                        transition={{duration:0.8, ease:"easeOut"}}
+                                        >f</motion.div>
+                                        <motion.span
+                                            initial={{opacity:0, y:-50}}
+                                            animate={isVisible ? {opacity: 1, y:0} : {}}
+                                            transition={{duration:0.9, ease:"easeOut"}}
+                                            className='flex mx-[0.28em]'>
                                             <div>t</div>
                                             <div>h</div>
                                             <div>e</div>
-                                        </span>
+                                        </motion.span>
                                     </p>
-                                    <b className='flex justify-center font-bold'>
+                                    <motion.b
+                                     initial={{opacity:0, x:-50}}
+                                     animate={isVisible ? {opacity: 1, x:0} : {}}
+                                     transition={{duration:0.9, ease:"easeOut"}}
+                                     className='flex justify-center font-bold'>
                                         <div>D</div>
                                         <div>a</div>
                                         <div>r</div>
                                         <div>k</div>
-                                        <span className='flex mx-[0.28em]'>
+                                        <span
+                                        className='flex mx-[0.28em]'>
                                             <div>W</div>
                                             <div>i</div>
                                             <div>z</div>
@@ -83,9 +115,14 @@ const Section04 = () => {
                                         <div>o</div>
                                         <div>r</div>
                                         <div>t</div>
-                                    </b>
+                                    </motion.b>
                                 </h2>
-                                <small className='overflow-hidden block text-[max(0.2em,12px)] tracking-[-0.03em] text-[#555] font-semibold'>Voldemort</small>
+                                <motion.small
+                                    initial={{opacity:0, y:-50}}
+                                    animate={isVisible ? {opacity: 1, y:0} : {}}
+                                    transition={{duration:0.7, ease:"easeOut"}}
+                                    className='overflow-hidden block text-[max(0.2em,12px)] tracking-[-0.03em] text-[#555] font-semibold'
+                                    >Voldemort</motion.small>
                             </div>
                         </div>
                         <div className='flex items-center justify-center relative top-80 box-border text-[calc(150/100*1em)]'>
