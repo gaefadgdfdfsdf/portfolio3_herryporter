@@ -19,7 +19,7 @@ const Section04 = () => {
 
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-300%']);
 
-    // 스크롤 방향 감지
+    
     useEffect(() => {
         let lastScrollY = window.scrollY;
 
@@ -35,7 +35,7 @@ const Section04 = () => {
         return () => window.removeEventListener('scroll', updateScrollDir);
     }, []);
 
-    // nearEnd 판별
+    
     useEffect(() => {
         const unsubscribe = scrollYProgress.onChange((v) => {
             setIsNearEnd(v > 0.5);
@@ -43,7 +43,7 @@ const Section04 = () => {
         return () => unsubscribe();
     }, [scrollYProgress]);
 
-    // 고정 여부 판단
+    
     useEffect(() => {
         const section = sectionRef.current;
         const handleScroll = () => {
@@ -62,7 +62,7 @@ const Section04 = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // stickyRef 관찰 (mainText 이미지 애니메이션용)
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -75,7 +75,7 @@ const Section04 = () => {
         return () => stickyRef.current && observer.unobserve(stickyRef.current);
     }, []);
 
-    // cardRef 관찰 (카드 애니메이션용)
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -196,53 +196,12 @@ const Section04 = () => {
                             </div>
                         </motion.div>
                     </div>
-
-                    {/* 배경 이미지 + 텍스트 */}
-                    <div className="overflow-hidden flex items-center justify-center relative">
-                        <div className="absolute mt-[90%] text-[max(calc(24/100*1em),15px)] tracking-[-0.025em] flex flex-col items-center leading-[1.65] px-[5vw] font-semibold">
-                            <div className="_imgbx w-[calc(260/24*1em)] mb-[calc(40/24*1em)] flex items-center justify-center">
-                                <img src={process.env.PUBLIC_URL + 'img/vold_6.png'} alt="vold_6" />
-                            </div>
-                            <small>
-                                Voldemort, the most feared
-                                <br />
-                                and powerful of them all.
-                            </small>
-                            <p className="mt-[0.2em]">
-                                <span className="bg-clip-text text-transparent">
-                                    People were so afraid of him that they refused to even say his name,
-                                    <br />
-                                    calling him "He-Who-Must-Not-Be-Named" instead.
-                                </span>
-                            </p>
-                        </div>
-                        <div className="mt-[50%] h-[600%] absolute flex items-center justify-center">
-                            <img
-                                className="w-auto h-full opacity-30 object-cover"
-                                src={process.env.PUBLIC_URL + 'img/haegol.png'}
-                                alt="해골마법사"
-                            />
-                        </div>
-                    </div>
                 </div>
             </div>
 
             {/* 고정 해제 이후 콘텐츠 */}
-            <div className="pb-[500px]">
-                <div className="max-w-[1600px] mx-auto w-[90%]">
-                    <ul className="text-white mb-[380px]">
-                        {[
-                            'Voldemort created Horcruxes to split and hide his soul in order to achieve immortality.',
-                            'He sought to become the most powerful being in the wizarding world, aiming to dominate others.',
-                            'He sought to become the most powerful being in the wizarding world, aiming to dominate others.',
-                        ].map((text, i) => (
-                            <li key={i} className="mb-[180px]">
-                                <small className="block text-[20px] font-semibold opacity-10">{`0${i + 1}`}</small>
-                                <p className="text-[30px] opacity-10 leading-[1.666] mt-[20px]">{text}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div className="pb-[800px]">
+               
             </div>
 
             {/* 카드 */}

@@ -1,12 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {motion} from "framer-motion";
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 
 
 const Section02 = () => {
 
         const [isVisible, setIsVisible] = useState(false);
         const ref = useRef(null);
-    
+        const horizontalRef = useRef(null);
+        const [scrollLength, setScrollLength] = useState(0);
+
+
+        const { scrollYProgress } = useScroll({
+                target: ref,
+                offset: ["start end", "end start"]
+            });
+        
+            const x = useTransform(scrollYProgress, [0, 1], [0, -scrollLength]);
+        
+       
         useEffect(() => {
             const observer = new IntersectionObserver(
                 ([entry]) => {
@@ -26,12 +38,42 @@ const Section02 = () => {
             };
         }, []);
 
+          useEffect(() => {
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        setIsVisible(entry.isIntersecting);
+                    },
+                    { threshold: 0.5 }
+                );
+        
+                if (ref.current) observer.observe(ref.current);
+                return () => ref.current && observer.unobserve(ref.current);
+            }, []);
+
+
+            useEffect(() => {
+                const updateScrollLength = () => {
+                  if (horizontalRef.current && ref.current) {
+                    const containerWidth = horizontalRef.current.scrollWidth;
+                    const windowWidth = window.innerWidth;
+                    const scrollAmount = containerWidth - windowWidth;
+            
+                    setScrollLength(scrollAmount);
+                  }
+                };
+            
+                updateScrollLength();
+                window.addEventListener("resize", updateScrollLength);
+                return () => window.removeEventListener("resize", updateScrollLength);
+              }, []);
+            
 
         
     return (
         <>
             <section ref={ref} id="section02" className='overflow-hidden block w-full h-[200vh] relative'>
-                <div className='w-full h-full absolute flex items-center justify-center'>
+               
+                <div className='w-full h-full absolute flex items-center justify-center overflow-hidden'>
                     <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night' />
                 </div>
                 <div className='mt-[160px] relative mx-auto w-[90%]'>
@@ -84,13 +126,18 @@ const Section02 = () => {
                         </motion.b>
                     </h2>
                 </div>
-                <div className='relative flex overflow-visible box-border w-[1912px] h-[5242px] p-[0_0_4289px_0] z-auto'>
-                    <div className='relative flex w-full h-[953px] justify-center items-center'>
-                        <div className='justify-center items-center flex absolute left-0 bottom-[-300px] transform translate-y-[10%] h-[calc(996/920*var(--vh,1vh)*100)]'>
+                <div className='relative flex box-border w-[1912px] h-[5242px] p-[0_0_4289px_0] z-auto'>
+                    <div className='absolute top-0 flex w-full h-screen justify-center items-center'>
+                        <div className='overflow-hidden justify-center items-center flex absolute left-0 bottom-[-300px] transform translate-y-[10%] h-[calc(996/920*var(--vh,1vh)*100)]'>
                             <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/castle.png'} alt='castle' />
                         </div>
-                        <div className='translate-x-0 translate-y-0 pt-0 opacity-100 w-[calc(3000/920*var(--vh,1vh)*100)] flex-shrink-0 absolute top-[calc((var(--vh,1vh)*100)-(600/920*var(--vh,1vh)*100))/2] flex items-start justify-center rounded-full'>
-                            <div className='rotate-0 absolute w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                        <div className="sticky top-0 h-screen w-full">
+                        <motion.div 
+                        id="cards"
+                        ref={horizontalRef}
+                        style={{ x }}
+                        className='pt-0 opacity-100 w-[calc(3000/920*var(--vh,1vh)*100)] flex-shrink-0 absolute -bottom-20 left-40 flex items-start justify-center rounded-full'>
+                            <div className='w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom mr-10'>
                                 <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
                                     <div className='w-full relative flex items-center justify-center'>
                                         <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/herryporter.jpg'} alt='herry porter' />
@@ -101,7 +148,7 @@ const Section02 = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='rotate-[30deg] absolute right-[530px] top-[210px] w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                            <div className='w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom mr-10'>
                                 <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
                                     <div className='w-full relative flex items-center justify-center'>
                                         <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/emmawatson.jpg'} alt='herry porter' />
@@ -112,7 +159,7 @@ const Section02 = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='rotate-[60deg] absolute right-[-50px] top-[800px] w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                            <div className='w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom mr-10'>
                                 <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
                                     <div className='w-full relative flex items-center justify-center'>
                                         <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/ron.jpg'} alt='ron' />
@@ -123,7 +170,7 @@ const Section02 = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='rotate-[90deg] absolute right-[-200px] top-[1550px] w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
+                            <div id="lastCard" className='w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom'>
                                 <div className='overflow-hidden cursor-pointer bg-[#262828] rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
                                     <div className='w-full relative flex items-center justify-center'>
                                         <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/dumbledore.png'} alt='ron' />
@@ -134,6 +181,7 @@ const Section02 = () => {
                                     <div className='absolute bg-[#262828] -z-10 rounded-[var(--border-radius)] w-full h-full pointer-events-none shadow-[0px_0px_16px_8px_rgba(0,0,0,0.1)]'></div>
                                 </div>
                             </div>
+                        </motion.div>
                         </div>
                     </div>
                     <div className='flex items-center justify-center h-full w-full relative pointer-events-none hidden'>
@@ -179,6 +227,7 @@ const Section02 = () => {
                             </div>
                         </div>
                     </div>
+                
                 </div>
             </section>
         </>
