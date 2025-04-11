@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+
+
 const Section04 = () => {
     const sectionRef = useRef(null);
     const stickyRef = useRef(null);
     const horizontalRef = useRef(null);
+    const cardRef = useRef(null);
     const [isPinned, setIsPinned] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [isNearEnd, setIsNearEnd] = useState(false); // 추가
@@ -51,6 +54,18 @@ const Section04 = () => {
 
         if (stickyRef.current) observer.observe(stickyRef.current);
         return () => stickyRef.current && observer.unobserve(stickyRef.current);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.5 }
+        );
+
+        if (cardRef.current) observer.observe(cardRef.current);
+        return () => cardRef.current && observer.unobserve(cardRef.current);
     }, []);
 
     return (
@@ -213,7 +228,7 @@ const Section04 = () => {
             <div className='max-w-[1600px] mx-auto w-[90%]'>
 
             {/* 카드 */}
-            <ul className="mt-56 pb-24 flex flex-wrap  items-center justify-center  w-[calc(100%+40px)] translate-x-[-20px]">
+            <ul ref={cardRef} className="mt-56 pb-24 flex flex-wrap  items-center justify-center  w-[calc(100%+40px)] translate-x-[-20px]">
                 {[
                     {
                         title: 'Childhood',
@@ -231,7 +246,12 @@ const Section04 = () => {
                         desc: "After being defeated by Harry's mother's love, Voldemort returned, but was ultimately destroyed by his own greed and evil choices.",
                     },
                 ].map((item, i) => (
-                    <li
+                   
+                      
+                    <motion.li
+                        initial={{ opacity: 0, y:-50 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
                         key={i}
                         className="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px] mx-[20px] rounded-[20px] border-2 border-[#ffffff] bg-[#414141] text-white font-medium p-[50px_14px] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em]"
                     >
@@ -246,7 +266,7 @@ const Section04 = () => {
                             {item.title}
                         </b>
                         <p className="leading-[1.666] text-center">{item.desc}</p>
-                    </li>
+                    </motion.li>
                 ))}
             </ul>
             </div>

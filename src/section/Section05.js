@@ -32,7 +32,7 @@ const Section05 = () => {
    
     return (
         <>
-            <section ref={ref} className='bg-[#a1cccc] overflow-hidden relative block'>
+            <section ref={ref} className='bg-[#93c7c7] overflow-hidden relative block'>
                 <div className='max-[1600px]:flex-col pb-[150px] flex items-start justify-between pt-[150px] max-w[1600px] relative mx-auto w-[90%]'>
                     <div className='absolute w-[722px] left-[96px] bottom-0 transform translate-y-[15%] opacity-65'>
                         <img className='max-w-full h-auto align-top' src={process.env.PUBLIC_URL + 'img/herry_porter.png'} alt='글자' />
