@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-
-
 const Section04 = () => {
     const sectionRef = useRef(null);
     const stickyRef = useRef(null);
     const horizontalRef = useRef(null);
     const cardRef = useRef(null);
+
     const [isPinned, setIsPinned] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [isNearEnd, setIsNearEnd] = useState(false); // 추가
+    const [isNearEnd, setIsNearEnd] = useState(false);
+    const [scrollDirection, setScrollDirection] = useState('down');
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
@@ -19,13 +19,31 @@ const Section04 = () => {
 
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-300%']);
 
+    // 스크롤 방향 감지
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const updateScrollDir = () => {
+            const currentScrollY = window.scrollY;
+            if (Math.abs(currentScrollY - lastScrollY) < 15) return;
+
+            setScrollDirection(currentScrollY > lastScrollY ? 'down' : 'up');
+            lastScrollY = currentScrollY;
+        };
+
+        window.addEventListener('scroll', updateScrollDir);
+        return () => window.removeEventListener('scroll', updateScrollDir);
+    }, []);
+
+    // nearEnd 판별
     useEffect(() => {
         const unsubscribe = scrollYProgress.onChange((v) => {
-            setIsNearEnd(v > 0.5); // 85% 이상일 때 상태 전환
+            setIsNearEnd(v > 0.5);
         });
         return () => unsubscribe();
     }, [scrollYProgress]);
 
+    // 고정 여부 판단
     useEffect(() => {
         const section = sectionRef.current;
         const handleScroll = () => {
@@ -44,6 +62,7 @@ const Section04 = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // stickyRef 관찰 (mainText 이미지 애니메이션용)
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -56,6 +75,7 @@ const Section04 = () => {
         return () => stickyRef.current && observer.unobserve(stickyRef.current);
     }, []);
 
+    // cardRef 관찰 (카드 애니메이션용)
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -74,11 +94,11 @@ const Section04 = () => {
             className={`relative text-center transition-colors duration-500 ${
                 isNearEnd ? 'bg-[#1f1d1d]' : 'bg-white'
             } text-[calc(100/920_*_var(--vh,1vh)*100)] block`}
-            style={{ height: 'auto'}}
+            style={{ height: 'auto' }}
         >
             <div className="sticky top-0 h-screen overflow-hidden z-10" ref={stickyRef}>
                 <div className="flex flex-col justify-center h-full relative box-border">
-                    {/* 상단 텍스트 */}
+                    {/* mainText */}
                     <div
                         id="mainText"
                         className={`flex items-center justify-center relative transition-opacity duration-500 ${
@@ -225,52 +245,48 @@ const Section04 = () => {
                 </div>
             </div>
 
-            <div className='max-w-[1600px] mx-auto w-[90%]'>
-
             {/* 카드 */}
-            <ul ref={cardRef} className="mt-56 pb-24 flex flex-wrap  items-center justify-center  w-[calc(100%+40px)] translate-x-[-20px]">
-                {[
-                    {
-                        title: 'Childhood',
-                        img: 'egg.png',
-                        desc: 'Born as Tom Riddle, he grew up in an orphanage and became obsessed with power and dark magic at Hogwarts.',
-                    },
-                    {
-                        title: 'Rise as Dark Lord',
-                        img: 'crystal.png',
-                        desc: 'He became "He-Who-Must-Not-Be-Named," created Horcruxes for immortality, and sought to dominate the wizarding world.',
-                    },
-                    {
-                        title: 'Resurrection & Defeat',
-                        img: 'letter.png',
-                        desc: "After being defeated by Harry's mother's love, Voldemort returned, but was ultimately destroyed by his own greed and evil choices.",
-                    },
-                ].map((item, i) => (
-                   
-                      
-                    <motion.li
-                        initial={{ opacity: 0, y:-50 }}
-                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, ease: 'easeOut' }}
-                        key={i}
-                        className="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px] mx-[20px] rounded-[20px] border-2 border-[#ffffff] bg-[#414141] text-white font-medium p-[50px_14px] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em]"
-                    >
-                        <div className="mb-[26px] flex items-center justify-center">
-                            <img
-                                className="h-[90px] w-full max-h-full object-cover"
-                                src={process.env.PUBLIC_URL + 'img/' + item.img}
-                                alt={item.title}
-                            />
-                        </div>
-                        <b className="text-[calc(1.33em)] text-[#5bcece] font-poppins font-semibold mb-[22px]">
-                            {item.title}
-                        </b>
-                        <p className="leading-[1.666] text-center">{item.desc}</p>
-                    </motion.li>
-                ))}
-            </ul>
+            <div className="max-w-[1600px] mx-auto w-[90%]">
+                <ul ref={cardRef} className="mt-56 pb-24 flex flex-wrap items-center justify-center w-[calc(100%+40px)] translate-x-[-20px]">
+                    {[
+                        {
+                            title: 'Childhood',
+                            img: 'egg.png',
+                            desc: 'Born as Tom Riddle, he grew up in an orphanage and became obsessed with power and dark magic at Hogwarts.',
+                        },
+                        {
+                            title: 'Rise as Dark Lord',
+                            img: 'crystal.png',
+                            desc: 'He became "He-Who-Must-Not-Be-Named," created Horcruxes for immortality, and sought to dominate the wizarding world.',
+                        },
+                        {
+                            title: 'Resurrection & Defeat',
+                            img: 'letter.png',
+                            desc: "After being defeated by Harry's mother's love, Voldemort returned, but was ultimately destroyed by his own greed and evil choices.",
+                        },
+                    ].map((item, i) => (
+                        <motion.li
+                            initial={{ opacity: 0, y: -50 }}
+                            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                            key={i}
+                            className="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px] mx-[20px] rounded-[20px] border-2 border-[#ffffff] bg-[#414141] text-white font-medium p-[50px_14px] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em]"
+                        >
+                            <div className="mb-[26px] flex items-center justify-center">
+                                <img
+                                    className="h-[90px] w-full max-h-full object-cover"
+                                    src={process.env.PUBLIC_URL + 'img/' + item.img}
+                                    alt={item.title}
+                                />
+                            </div>
+                            <b className="text-[calc(1.33em)] text-[#5bcece] font-poppins font-semibold mb-[22px]">
+                                {item.title}
+                            </b>
+                            <p className="leading-[1.666] text-center">{item.desc}</p>
+                        </motion.li>
+                    ))}
+                </ul>
             </div>
-
         </section>
     );
 };
