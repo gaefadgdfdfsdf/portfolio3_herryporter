@@ -229,7 +229,7 @@ const Section04 = () => {
                             animate={isVisible ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, ease: 'easeOut' }}
                             key={i}
-                            className="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px] mx-[20px] rounded-[20px] border-2 border-[#ffffff] bg-[#414141] text-white font-medium p-[50px_14px] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em]"
+                            className="max-[1437px]:mt-10 w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px] mx-[20px] rounded-[20px] border-2 border-[#ffffff] bg-[#414141] text-white font-medium p-[50px_14px] flex flex-col items-center justify-center text-[18px] tracking-[-0.03em]"
                         >
                             <div className="mb-[26px] flex items-center justify-center">
                                 <img
