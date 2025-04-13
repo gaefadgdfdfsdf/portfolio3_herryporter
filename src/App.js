@@ -32,11 +32,12 @@ function App() {
     <div className='w-full h-full overflow-x-clip'>
       <div className='transform-none box-border w-full overflow-visible relative'>
         <Section01 />
-        <Section02 />
+        <Section06 />
+        {/* <Section02 /> */}
         <Section03/>
         <Section04/>
         <Section05/>
-        <Section06 />
+        {/* <Section06 /> */}
         {/* <Gsap01 /> */}
       </div>
     </div>

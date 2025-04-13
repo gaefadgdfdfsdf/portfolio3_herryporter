@@ -30,9 +30,9 @@ const Section03 = () => {
 
     return (
         <>
-        <div className='w-full h-14 bg-[#160501] '></div>
-        <section className='w-full  pb-[50vh] relative mx-auto my-0 bg-[#160501] overflow-hidden border-4'>
-       <div ref={el => sectionsRef.current[0] = el} className=' w-full h-full mx-auto bg-black'>
+        <div className='w-full h-20 bg-[#2d0d05] '></div>
+        <section className='w-full  pb-[50vh] relative mx-auto my-0 bg-[#2d0d05] overflow-hidden border-4'>
+       <div ref={el => sectionsRef.current[0] = el} className=' w-full h-full mx-auto'>
            <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:mx-auto max-[1080px]:items-center max-xl:text-center flex flex-col max-xl:items-start justify-between h-full text-[100px] overflow-hidden'>
@@ -247,7 +247,7 @@ const Section03 = () => {
         <div className='max-[1500px]:h-[50vh] max-md:h-[50vh] max-xl:h-[70vh] h-[50vh]'></div>
   
    </section>
-   <section className='w-full top-0 relative mx-auto my-0 bg-[#160501] overflow-hidden border-4 border-red-600 pb-20'>  
+   <section className='w-full top-0 relative mx-auto my-0 bg-[#2d0d05] overflow-hidden border-4 border-red-600 pb-20'>  
     <div className='flex w-max animate-marquee pt-24 pb-20'>
         {/* 텍스트 그룹을 2배로 복제하여 자연스러운 반복 */}
         <div className='flex shrink-0 space-x-4'>

@@ -28,15 +28,12 @@ const Section06 = () => {
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile
-      ? ["0%", `${-75 * (imageCount - 1)}%`]
-      : ["0%", `${-75 * (imageCount / 2 - 1)}vw`]
+  const x = useTransform(scrollYProgress, [0, 1], isMobile
+    ? ["0%", `${-100 * (imageCount - 1)}%`] // 모바일일 때
+    : ["0%", `${-66 * (imageCount / 2 - 1)}vw`] // 데스크탑일 때
   );
 
-  const rotations = [-7.5, 15, 2.5, 7.5, -5, 5]; // 회전 각도 배열
+  const rotations = [-7.5, 15, 2.5, 7.5, -5, 0]; // 회전 각도 배열
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,7 +53,7 @@ const Section06 = () => {
       ref={containerRef}
       style={{
         height: containerHeight,
-        background: "linear-gradient(to bottom, #332726, #000000)",
+        background: "linear-gradient(to bottom, #322726, #211c1b)",
       }}
       className="relative"
     >
@@ -64,6 +61,17 @@ const Section06 = () => {
       <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_1.png'} alt='cloud' />
       </div>
 
+      <div className=" flex items-center justify-center absolute -right-10 top-2/4">
+      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_2.png'} alt='cloud' />
+      </div>
+
+      <div className=" flex items-center justify-center absolute right-20 top-1/4">
+      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/themoon.png'} alt='themoon' />
+      </div>
+
+     
+      
+   
   <div ref={ref} className='relative mx-auto w-[90%] z-10'>
           <h2 className='text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins pt-20'>
               <motion.b
@@ -122,7 +130,7 @@ const Section06 = () => {
               className="w-full md:w-1/3 h-full flex items-center justify-center flex-none"
             >
               <img
-                className="h-2/4 rounded-3xl shadow-2xl"
+                className="h-2/4 rounded-3xl drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
                 src={`/po0${index + 1}.jpg`}
                 alt={`Poster ${index + 1}`}
                 style={{ rotate: `${rotations[index]}deg` }}
