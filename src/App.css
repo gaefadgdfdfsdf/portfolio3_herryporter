@@ -489,3 +489,11 @@
   display: flex;
   animation: marquee 24s linear infinite;
 }
+
+#progress {
+  background-color: #c3673c;
+}
+
+#percent {
+  color: #c3673c;
+}
