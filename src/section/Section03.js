@@ -33,7 +33,7 @@ const Section03 = () => {
         <div className='w-full h-20 bg-[#2d0d05] '></div>
         <section className='w-full  pb-[50vh] relative mx-auto my-0 bg-[#2d0d05] overflow-hidden border-4'>
        <div ref={el => sectionsRef.current[0] = el} className=' w-full h-full mx-auto'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:mx-auto max-[1080px]:items-center max-xl:text-center flex flex-col max-xl:items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-xl: max-[540px]:text-[0.6em] max-xl:text-[0.8em] text-[1.2em] libre-baskerville-regular '>01</em>
@@ -65,7 +65,7 @@ const Section03 = () => {
          
        </div>
        <div ref={el => sectionsRef.current[1] = el} className='w-full h-full mx-auto mb-20'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:items-center max-[1080px]:mx-auto max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] text-[1.2em] max-xl:text-[0.8em]  libre-baskerville-regular'>02</em>
@@ -93,7 +93,7 @@ const Section03 = () => {
            </div>
        </div>
        <div ref={el => sectionsRef.current[2] = el} className='w-full h-full mx-auto mb-20'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:items-center max-[1080px]:mx-auto max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic",  color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] text-[1.2em] max-xl:text-[0.8em]  libre-baskerville-regular'>03</em>
@@ -123,7 +123,7 @@ const Section03 = () => {
            </div>
        </div>
        <div ref={el => sectionsRef.current[3] = el} className='w-full h-full mx-auto mb-20'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:items-center max-[1080px]:mx-auto max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic",  color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] text-[1.2em] max-xl:text-[0.8em] libre-baskerville-regular'>04</em>
@@ -152,7 +152,7 @@ const Section03 = () => {
            </div>
        </div>
        <div ref={el => sectionsRef.current[4] = el} className='w-full h-full mx-auto mb-20'>
-            <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+            <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white  ml-20 mr-20  overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                     <div className='max-[1080px]:items-center max-[1080px]:mx-auto max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic",color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] text-[1.2em] max-xl:text-[0.8em] libre-baskerville-regular'>05</em>
@@ -183,7 +183,7 @@ const Section03 = () => {
            </div>
        </div>
        <div ref={el => sectionsRef.current[5] = el} className='w-full h-full mx-auto mb-20'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                <div className='max-[1080px]:flex-col flex items-start justify-between'>
                 <div className='max-[1080px]:items-center max-[1080px]:mx-auto max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                     <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-[540px]:text-[0.6em] text-[1.2em] max-xl:text-[0.8em] libre-baskerville-regular'>06</em>
@@ -214,7 +214,7 @@ const Section03 = () => {
        </div>
 
        <div ref={el => sectionsRef.current[6] = el} className='w-full h-full mx-auto mb-20'>
-           <div className=" max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+           <div className="max-[1024px]:pt-10 max-md:ml-10 max-md:mr-10 h-[100vh] bg-white ml-20 mr-20 overflow-hidden pt-28 pb-20 pl-16 pr-16 rounded-[20px] shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
                 <div className='ax-[1080px]:mx-auto max-[1080px]:flex-col flex items-start justify-between'>
                     <div className=' max-[1080px]:mx-auto max-[1080px]:items-center max-xl:items-start max-xl:text-center flex flex-col items-start justify-between h-full text-[100px] overflow-hidden'>
                         <em style={{ fontStyle: "italic", color: "transparent", lineHeight: "1", WebkitTextStroke: "1px #7e1800", }} className='max-xl:text-[0.8em] max-[540px]:text-[0.6em] text-[1.2em] libre-baskerville-regular'>07</em>

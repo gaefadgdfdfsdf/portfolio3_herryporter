@@ -7,6 +7,27 @@ const Section06 = () => {
   const containerRef = useRef(null);
   const imageCount = 6; // 이미지 개수
   const [isMobile, setIsMobile] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const hoverImages = [
+    "/hover_po01.jpg",
+    "/hover_po02.jpg",
+    "/hover_po03.jpg",
+    "/hover_po04.jpg",
+    "/hover_po05.jpg",
+    "/hover_po06.jpg"
+  ];
+  
+  const baseImages = [
+    "/po01.jpg",
+    "/po02.jpg",
+    "/po03.jpg",
+    "/po04.jpg",
+    "/po05.jpg",
+    "/po06.jpg"
+  ];
+  
+ 
 
   useEffect(() => {
     const checkMobile = () => {
@@ -53,19 +74,19 @@ const Section06 = () => {
       ref={containerRef}
       style={{
         height: containerHeight,
-        background: "linear-gradient(to bottom, #322726, #211c1b)",
+        background: "linear-gradient(to bottom, #322726, #000000)",
       }}
       className="relative"
     >
-      <div className=" flex items-center justify-center absolute -left-10 top-1/3">
+      <div className="max-md:w-56 flex items-center justify-center absolute -left-10 top-1/3">
       <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_1.png'} alt='cloud' />
       </div>
 
-      <div className=" flex items-center justify-center absolute -right-10 top-2/4">
+      <div className="max-md:w-56 flex items-center justify-center absolute -right-10 top-2/4">
       <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_2.png'} alt='cloud' />
       </div>
 
-      <div className=" flex items-center justify-center absolute right-20 top-1/4">
+      <div className="max-md:w-56 flex items-center justify-center absolute right-20 top-1/4">
       <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/themoon.png'} alt='themoon' />
       </div>
 
@@ -73,7 +94,7 @@ const Section06 = () => {
       
    
   <div ref={ref} className='relative mx-auto w-[90%] z-10'>
-          <h2 className='text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins pt-20'>
+          <h2 className='max-md:text-[70px] text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins pt-20'>
               <motion.b
                 initial={{x:50}}
                 animate={isVisible ? {x:0} : {}}
@@ -124,19 +145,22 @@ const Section06 = () => {
       </div>
       <div className="sticky top-0 h-screen overflow-hidden">
         <motion.div className="flex h-full items-center" style={{ x }}>
-          {Array.from({ length: imageCount }).map((_, index) => (
-            <div
-              key={index}
-              className="w-full md:w-1/3 h-full flex items-center justify-center flex-none"
-            >
-              <img
-                className="h-2/4 rounded-3xl drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
-                src={`/po0${index + 1}.jpg`}
-                alt={`Poster ${index + 1}`}
-                style={{ rotate: `${rotations[index]}deg` }}
-              />
-            </div>
-          ))}
+        {[0, 1, 2, 3, 4, 5].map((index) => (
+    <div
+      key={index}
+      className="relative w-full md:w-1/3 h-full flex items-center justify-center flex-none"
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
+    >
+      <img
+        className="h-2/4 rounded-3xl drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-300"
+        src={hoveredIndex === index ? hoverImages[index] : baseImages[index]}
+       
+        style={{ rotate: `${rotations[index]}deg` }}
+      />
+      
+    </div>
+  ))}
         </motion.div>
       </div>
     </div>
