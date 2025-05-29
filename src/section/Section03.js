@@ -17,7 +17,7 @@ const Section03 = () => {
                 start: "top top",
                 pin: true,
                 pinSpacing: false,
-                markers: true,
+                markers: false,
                 snap: 1
             });
         });
