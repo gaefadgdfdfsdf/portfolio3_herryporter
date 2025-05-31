@@ -50,7 +50,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px] max-xl:pt-6 max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_1.jpg'} alt='pic_1' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_1.jpg'} alt='pic_1' />
                     </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -81,7 +81,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px] max-xl:pt-6 max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_2.jpg'} alt='pic_2' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_2.jpg'} alt='pic_2' />
                     </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -109,7 +109,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px]  max-xl:pt-6 max-xl:h-auto max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_3.jpg'} alt='pic_3' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_3.jpg'} alt='pic_3' />
                     </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -139,7 +139,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px]  max-xl:pt-6 max-xl:h-auto max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_4.jpg'} alt='pic_4' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_4.jpg'} alt='pic_4' />
                     </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-6 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -169,7 +169,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px]  max-xl:pt-6 max-xl:h-auto max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_5.jpg'} alt='pic_5' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_5.jpg'} alt='pic_5' />
                     </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -199,7 +199,7 @@ const Section03 = () => {
                     </div>
                 </div>
                 <div className='max-xl:w-[420px] max-xl:h-[270px] max-xl:pt-6 max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                    <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_6.jpg'} alt='pic_6' />
+                    <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_6.jpg'} alt='pic_6' />
                 </div>
                </div>
                <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>
@@ -229,7 +229,7 @@ const Section03 = () => {
                         </div>
                     </div>
                     <div className='max-xl:w-[420px] max-xl:h-[270px] max-xl:pt-6 max-[1080px]:mx-auto max-[768px]:w-full max-[1600px]:w-[460px] relative flex items-center justify-center w-[570px] h-[350px]'>
-                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/pic_7.jpg'} alt='pic_7' />
+                        <img className='max-xl:rounded-[20px] w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/pic_7.jpg'} alt='pic_7' />
                     </div>
                 </div>
                 <p className='max-[1600px]:text-[20px] max-[1080px]:hidden max-xl:text-[18px] max-xl:pt-2 tracking-[-0.03em] leading-[1.7] text-[#c3c3c3] text-[24px] libre-baskerville-regular-italic pt-16'>

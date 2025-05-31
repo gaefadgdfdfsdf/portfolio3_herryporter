@@ -111,7 +111,7 @@ const Section04 = () => {
                                 animate={isVisible ? { opacity: 1, scale: 1, rotate: 0 } : {}}
                                 transition={{ duration: 0.6, ease: 'easeOut' }}
                                 className="block mx-auto h-[1.7em] min-h-[60px] max-w-full align-top"
-                                src={process.env.PUBLIC_URL + 'img/magic_hat2.png'}
+                                src={process.env.PUBLIC_URL + '/img/magic_hat2.png'}
                                 alt="magic_hat"
                             />
                             <h2 className="font-poppins text-[0.5em] tracking-[-0.03em] leading-[1.3] mt-[0.46em] mb-[0.32em]">
@@ -170,7 +170,7 @@ const Section04 = () => {
                                     {item.img && (
                                         <div className="w-[1.51em] flex items-center justify-center">
                                             <img
-                                                src={process.env.PUBLIC_URL + 'img/' + item.img}
+                                                src={process.env.PUBLIC_URL + '/img/' + item.img}
                                                 alt={item.label}
                                                 className="w-full h-full max-h-full object-cover max-w-full"
                                             />
@@ -179,7 +179,7 @@ const Section04 = () => {
                                 </div>
                             ))}
                             <div className="w-[1.51em] flex items-center justify-center mr-[0.4em]">
-                                <img src={process.env.PUBLIC_URL + 'img/vold_6.png'} alt="vold_6" />
+                                <img src={process.env.PUBLIC_URL + '/img/vold_6.png'} alt="vold_6" />
                             </div>
                             <div className="libre-baskerville-regular text-[40px] leading-normal flex items-center justify-center mr-[0.8em]">
                                 <small>
@@ -190,7 +190,7 @@ const Section04 = () => {
                             <div className="w-[1.51em] flex items-center justify-center">
                                 <img
                                     className="w-auto h-full object-cover filter brightness-125 contrast-110 saturate-125"
-                                    src={process.env.PUBLIC_URL + 'img/haegol.png'}
+                                    src={process.env.PUBLIC_URL + '/img/haegol.png'}
                                     alt="해골마법사"
                                 />
                             </div>
@@ -234,7 +234,7 @@ const Section04 = () => {
                             <div className="mb-[26px] flex items-center justify-center">
                                 <img
                                     className="h-[90px] w-full max-h-full object-cover"
-                                    src={process.env.PUBLIC_URL + 'img/' + item.img}
+                                    src={process.env.PUBLIC_URL + '/img/' + item.img}
                                     alt={item.title}
                                 />
                             </div>

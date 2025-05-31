@@ -74,7 +74,7 @@ const Section02 = () => {
             <section ref={ref} id="section02" className='overflow-hidden block w-full h-[200vh] relative'>
                
                 <div className='w-full h-full absolute flex items-center justify-center overflow-hidden'>
-                    <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + 'img/night_bg.jpg'} alt='night' />
+                    <img className='w-full h-full max-h-full max-w-full object-cover align-top object-[60%_center]' src={process.env.PUBLIC_URL + '/img/night_bg.jpg'} alt='night' />
                 </div>
                 <div className='mt-[160px] relative mx-auto w-[90%]'>
                     <h2 className='text-white text-[120px] tracking[-0.03em] flex justify-end font-poppins'>
@@ -129,7 +129,7 @@ const Section02 = () => {
                 <div className='relative flex box-border w-[1912px] h-[5242px] p-[0_0_4289px_0] z-auto'>
                     <div className='absolute top-0 flex w-full h-screen justify-center items-center'>
                         <div className='overflow-hidden justify-center items-center flex absolute left-0 bottom-[-300px] transform translate-y-[10%] h-[calc(996/920*var(--vh,1vh)*100)]'>
-                            <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/castle.png'} alt='castle' />
+                            <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/castle.png'} alt='castle' />
                         </div>
                         <div className="sticky top-0 h-screen w-full">
                         <motion.div 
@@ -140,11 +140,11 @@ const Section02 = () => {
                             <div className='w-[calc((430/3000*100)*1%)] h-1/2 origin-bottom mr-10'>
                                 <div className='overflow-hidden cursor-pointer bg-white rounded-[var(--border-radius)] relative shadow-[0px_0px_16px_10px_rgba(255,255,255,0.3)] top-0 flex items-center justify-center'>
                                     <div className='w-full relative flex items-center justify-center'>
-                                        <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/herryporter.jpg'} alt='herry porter' />
+                                        <img className='w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + '/img/herryporter.jpg'} alt='herry porter' />
                                         <img className='absolute opacity-0 transition-opacity duration-300 w-full h-full max-h-full object-cover max-w-full align-top' src={process.env.PUBLIC_URL + 'img/herryporter2.jpg'} alt='herry porter2' />
                                     </div>
                                     <div className='absolute left-0 bottom-0 h-[calc(120/920*var(--vh,1vh)*100)] w-full bg-gradient-to-b from-transparent to-black'>
-                                        <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + 'img/herry_text.png'} alt='herry porter' />
+                                        <img className='pt-9 pl-6' src={process.env.PUBLIC_URL + '/img/herry_text.png'} alt='herry porter' />
                                     </div>
                                 </div>
                             </div>

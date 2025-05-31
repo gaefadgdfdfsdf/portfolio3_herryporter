@@ -41,10 +41,10 @@ const Section01 = () => {
         </header>
          
         <div className='w-full h-full absolute flex items-center justify-center'>
-          <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/bl_bg.jpg'} alt='blackbg' />
+          <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + '/img/bl_bg.jpg'} alt='blackbg' />
         </div>
         <div  className='fadeleft flex items-center justify-center absolute top-0 right-[5vw] h-full'>
-          <img className='w-full h-full max-h-full max-w-full object-contain' src={process.env.PUBLIC_URL + 'img/human_img.png'} alt='human' />
+          <img className='w-full h-full max-h-full max-w-full object-contain' src={process.env.PUBLIC_URL + '/img/human_img.png'} alt='human' />
         </div>
         <div className='max-lg:pb-10 flex flex-col justify-between pb-20 box-border relative w-[90%] mx-auto my-0 h-screen'>
           <h2 className='pt-[max(calc(160/920*var(--vh,1vh)*100),100px)]'>

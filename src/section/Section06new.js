@@ -10,21 +10,21 @@ const Section06 = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const hoverImages = [
-    "/hover_po01.jpg",
-    "/hover_po02.jpg",
-    "/hover_po03.jpg",
-    "/hover_po04.jpg",
-    "/hover_po05.jpg",
-    "/hover_po06.jpg"
+    process.env.PUBLIC_URL + "/hover_po01.jpg",
+  process.env.PUBLIC_URL + "/hover_po02.jpg",
+  process.env.PUBLIC_URL + "/hover_po03.jpg",
+  process.env.PUBLIC_URL + "/hover_po04.jpg",
+  process.env.PUBLIC_URL + "/hover_po05.jpg",
+  process.env.PUBLIC_URL + "/hover_po06.jpg"
   ];
   
   const baseImages = [
-    "/po01.jpg",
-    "/po02.jpg",
-    "/po03.jpg",
-    "/po04.jpg",
-    "/po05.jpg",
-    "/po06.jpg"
+    process.env.PUBLIC_URL + "/po01.jpg",
+  process.env.PUBLIC_URL + "/po02.jpg",
+  process.env.PUBLIC_URL + "/po03.jpg",
+  process.env.PUBLIC_URL + "/po04.jpg",
+  process.env.PUBLIC_URL + "/po05.jpg",
+  process.env.PUBLIC_URL + "/po06.jpg"
   ];
   
  
@@ -79,15 +79,15 @@ const Section06 = () => {
       className="relative"
     >
       <div className="max-md:w-56 flex items-center justify-center absolute -left-10 top-1/3">
-      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_1.png'} alt='cloud' />
+      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + '/img/cloud_1.png'} alt='cloud' />
       </div>
 
       <div className="max-md:w-56 flex items-center justify-center absolute -right-10 top-2/4">
-      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/cloud_2.png'} alt='cloud' />
+      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + '/img/cloud_2.png'} alt='cloud' />
       </div>
 
       <div className="max-md:w-56 flex items-center justify-center absolute right-20 top-1/4">
-      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + 'img/themoon.png'} alt='themoon' />
+      <img className='w-full h-full max-h-full max-w-full object-cover align-top' src={process.env.PUBLIC_URL + '/img/themoon.png'} alt='themoon' />
       </div>
 
      
