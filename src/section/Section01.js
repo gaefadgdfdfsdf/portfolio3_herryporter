@@ -36,7 +36,7 @@ const Section01 = () => {
     >
         <header className='text-white absolute z-[100] top-0 left-0 w-full'>
           <div className='flex items-center justify-between pt-[max(1.5625vw,30px)] relative mx-auto my-0 w-[90%]'>
-            <a href=''><img className='max-[500px]:h-[24px]' src={process.env.PUBLIC_URL + 'img/logo.png'} alt='logo image'/></a>
+            <a href=''><img className='max-[500px]:h-[24px]' src={process.env.PUBLIC_URL + '/img/logo.png'} alt='logo image'/></a>
           </div>
         </header>
          
